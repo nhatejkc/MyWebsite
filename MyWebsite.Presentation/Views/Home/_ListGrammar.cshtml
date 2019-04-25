@@ -1,0 +1,9 @@
+﻿@using MyWebsite.Core.Models
+@model IEnumerable<MyWebsite.Core.Models.Grammar>
+
+@foreach (var item in Model)
+{
+    <h2 class="text-primary">@item.GrammarShortDescription</h2>
+    <h4>@item.GrammarDescription</h4> 
+}
+

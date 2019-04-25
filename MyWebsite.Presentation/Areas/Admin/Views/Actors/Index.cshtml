@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyWebsite.Core.Models.Actor>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Actor</h6>
+    </div>
+    <div class="card-body">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model=>model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.ENName)</th>
+                        <th>@Html.DisplayNameFor(model => model.JPName)</th>
+                        <th>@Html.DisplayNameFor(model => model.PostOn)</th>
+                        <th>@Html.DisplayNameFor(model => model.Modifie)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.ENName</td>
+                            <td>@item.JPName</td>
+                            <td>@item.PostOn</td>
+                            <td>@item.Modifie</td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info" })
+                                @Html.ActionLink("Delete", "DeleteItem", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

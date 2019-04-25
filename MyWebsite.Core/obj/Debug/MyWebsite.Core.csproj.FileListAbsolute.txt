@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\bin\Debug\MyWebsite.Core.dll.config
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\bin\Debug\MyWebsite.Core.dll
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\bin\Debug\MyWebsite.Core.pdb
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\bin\Debug\EntityFramework.dll
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\bin\Debug\EntityFramework.xml
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.csproj.CopyComplete
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.dll
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.pdb
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.csprojAssemblyReference.cache

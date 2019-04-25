@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MyWebsite.Core.Models.Topic>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Topic</h6>
+    </div>
+    <div class="card-body">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.TopicTitle)</th>
+                        
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.TopicTitle</td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info" })
+                                @Html.ActionLink("Delete", "DeleteItem", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

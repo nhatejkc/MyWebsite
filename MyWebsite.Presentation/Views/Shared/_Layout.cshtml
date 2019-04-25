@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="./Content/Theme/img/favicon.png" type="image/png" />
+    <title>Learning Japanese</title>
+    <!-- Bootstrap CSS -->
+    @Styles.Render("~/Content/style")
+    <script type="text/javascript" src="https://anonyviet.com/php/hoaroi/hoaroi.js"></script>
+</head>
+<body>
+    @Html.Partial("_HeaderPartial")
+    @RenderBody()
+    @Html.Partial("_FooterPartial")
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    @Scripts.Render("~/Content/js")
+</body>
+</html>

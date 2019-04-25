@@ -1,0 +1,10 @@
+﻿@model DateTime?
+    @if (Model.HasValue)
+    {
+        <p>@Model.Value</p>
+    }
+    else
+    {
+        <p>Not found</p>
+    }
+

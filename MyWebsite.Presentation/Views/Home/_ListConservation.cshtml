@@ -1,0 +1,26 @@
+﻿@using MyWebsite.Core.Models
+@model IEnumerable<MyWebsite.Core.Models.SoundConservation>
+
+<table class="table-bordered" style="height:600px;">
+    <thead>
+        <tr class="text-info">
+            <th>Actor</th>
+            <th>Japanese</th>
+            <th>Romaji</th>
+            <th>Vietnamese</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Actor.ENName</td>
+                <td>@item.Japanese</td>
+                <td>@item.Romaji</td>
+                <td>@item.VietNamese</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

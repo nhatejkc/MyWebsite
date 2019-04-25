@@ -1,0 +1,58 @@
+﻿@model MyWebsite.Core.Models.Lession
+<!--================Home Banner Area =================-->
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Let try your best</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+<!--================ Start Course Details Area =================-->
+<section class="course_details_area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 course_details_left">
+                <div class="main_image">
+                    <img class="img-fluid" src="~/Content/Images/le1_mp_01.jpg" alt="">
+                </div>
+                <div class="content_wrapper">
+                    <h4 class="title">Objectives</h4>
+                    <div class="content">
+                        @Html.Action("GetSoundConservationByLessionId", "Home")
+                    </div>
+                    <div class="content mt-2">
+                        @Html.Action("GetGrammarByLessionId", "Home")
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 right-contents">
+                <ul>
+                    <li>
+                        <h2>@Model.MainConent</h2>
+                    </li>  
+                </ul>
+                <audio src="@Model.SoundLession"></audio>
+                <h4 class="title">Reviews</h4>
+                <div class="content">
+                    <div class="feedeback">
+                        <h6>Your Feedback</h6>
+                        <textarea name="feedback" class="form-control" cols="10" rows="10"></textarea>
+                        <div class="mt-10 text-right">
+                            <a href="#" class="primary-btn2 text-right rounded-0 text-white">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End Course Details Area =================-->

@@ -1,0 +1,10 @@
+﻿@model DateTime?
+@if (Model!=null)
+{
+    <p>@Model.Value.ToString("yyyy-MM-dd")</p>
+}
+else
+{
+    <p>Not found</p>
+}
+
