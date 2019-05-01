@@ -192,6 +192,7 @@
     <Compile Include="Areas\Admin\Controllers\QuestionsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SoundConservationsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TopicsController.cs" />
+    <Compile Include="Areas\Members\Controllers\HomeMemberController.cs" />
     <Compile Include="Areas\Members\MembersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -615,6 +616,7 @@
     <Content Include="Content\Images\le1_mp_37.jpg" />
     <Content Include="Content\Images\le1_mp_47.jpg" />
     <Content Include="Content\Images\le1_mp_48.jpg" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\Theme\css\font-awesome.css" />
     <Content Include="Content\Theme\img\banner\japan.jpg" />
     <Content Include="Content\ThemeAdmin\css\sb-admin-2.css" />
@@ -2481,8 +2483,6 @@
     <Content Include="Areas\Admin\Views\Grammars\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Grammars\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Lessions\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Lessions\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Lessions\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Lessions\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Lessions\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Questions\Create.cshtml" />
@@ -2518,6 +2518,11 @@
     <Content Include="Content\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Content\ckeditor\skins\moono-lisa\readme.md" />
     <Content Include="Areas\Members\Views\web.config" />
+    <Content Include="Areas\Members\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Members\Views\HomeMember\Index.cshtml" />
+    <Content Include="Areas\Members\Views\HomeMember\_ListQuestion.cshtml" />
+    <Content Include="Areas\Members\Views\HomeMember\_ListQuestionItem.cshtml" />
+    <Content Include="Areas\Members\Views\HomeMember\TopicDetails.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2572,7 +2577,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Members\Controllers\" />
     <Folder Include="Areas\Members\Models\" />
     <Folder Include="Areas\Members\Views\Shared\" />
   </ItemGroup>

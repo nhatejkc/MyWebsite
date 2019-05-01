@@ -50,6 +50,9 @@ namespace MyWebsite.Presentation
             container.RegisterType<IGenericRepository<Lession>, GenericRepository<Lession>>();
             container.RegisterType<IGenericRepository<Actor>, GenericRepository<Actor>>();
             container.RegisterType<IGenericRepository<Grammar>, GenericRepository<Grammar>>();
+            container.RegisterType<IGenericRepository<Topic>, GenericRepository<Topic>>();
+            container.RegisterType<IGenericRepository<QuestionItem>, GenericRepository<QuestionItem>>();
+            container.RegisterType<IGenericRepository<Question>, GenericRepository<Question>>();
             container.RegisterType<IGenericRepository<SoundConservation>, GenericRepository<SoundConservation>>();
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<ManageController>(new InjectionConstructor());

@@ -115,9 +115,9 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
             }
             return View(sound);
         }
-        public ActionResult DeleteItem(SoundConservation sound)
+        public ActionResult DeleteItem(int id)
         {
-            var item = db.SoundConservations.Find(sound.Id);
+            var item = db.SoundConservations.Find(id);
             db.SoundConservations.Remove(item);
             db.SaveChanges();
             return RedirectToAction("Index");

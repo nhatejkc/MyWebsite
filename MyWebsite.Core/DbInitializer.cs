@@ -2912,210 +2912,210 @@ namespace MyWebsite.Core
                 //QUESSION 1 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="先週の金曜日（学校）のしょかんでレポートを書きました.",
+                    QuestionTitle="1. 先週の金曜日（学校）のしょかんでレポートを書きました.",
                     Answer="がっこう",
                     TopicId=1,
                 },
                 //QUESSION 2 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="（今晩）いっしょにビールを飲みませんか。",
+                    QuestionTitle="2.（今晩）いっしょにビールを飲みませんか。",
                     Answer="こんばん",
                    TopicId=1
                 },
                 //QUESSION 3 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="(新聞) を読みます。それから、ＣＤを聞きます。",
+                    QuestionTitle="3. (新聞) を読みます。それから、ＣＤを聞きます。",
                     Answer="しんぶん",
                    TopicId=1
                 },
                 //QUESSION 4 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="学校は (午後) 一時五十分からです。",
+                    QuestionTitle="4. 学校は (午後) 一時五十分からです。",
                     Answer="ごご",
                    TopicId=1
                 },
                 //QUESSION 5 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="あの (店) で辞書を買いました。",
+                    QuestionTitle="5. あの (店) で辞書を買いました。",
                     Answer="みせ",
                    TopicId=1
                 },
                 //QUESSION 6 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="来月 (一人) で京都へ行きますか。",
+                    QuestionTitle="6. 来月 (一人) で京都へ行きますか。",
                     Answer="ひとりで",
                    TopicId=1
                 },
                 //QUESSION 7 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="よる時々ビデオを（見ます）。",
+                    QuestionTitle="7. よる時々ビデオを（見ます）。",
                     Answer="みます",
                    TopicId=1
                 },
                 //QUESSION 8 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="ちょっと休みませんか。（水）を飲みましょう。",
+                    QuestionTitle="8. ちょっと休みませんか。（水）を飲みましょう。",
                     Answer="みず",
                    TopicId=1
                 },
                 //QUESSION 9 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="（誕生日）は何月何日ですか。",
+                    QuestionTitle="9.（誕生日）は何月何日ですか。",
                     Answer="たんじょうび",
                    TopicId=1
                 },
                 //QUESSION 10 TOPIC 1
                 new Question()
                 {
-                    QuestionTitle="ロサンゼルスは今（午前）十一時です。",
+                    QuestionTitle="10. ロサンゼルスは今（午前）十一時です。",
                     Answer="ごぜん",
                    TopicId=1
                 },
                 ///QUESTION OF TOPIC 2/////////////////////////////////////////////////////
                 new Question()
                 {
-                    QuestionTitle="いつ（お母さん）に電話をかけますか。",
+                    QuestionTitle="1. いつ（お母さん）に電話をかけますか。",
                     Answer="おかあさん",
                     TopicId=2,
                 },
                 //QUESSION 2 TOPIC ２
                 new Question()
                 {
-                    QuestionTitle="（（お父さん）の誕生日になんをあげましたか。",
+                    QuestionTitle="2.（お父さん）の誕生日になんをあげましたか。",
                     Answer="おかあさん",
                    TopicId=2
                 },
                 //QUESSION 3 TOPIC ２
                 new Question()
                 {
-                    QuestionTitle="もう（昼ご飯）を食べましたか。",
+                    QuestionTitle="3. もう（昼ご飯）を食べましたか。",
                     Answer="ひるごはん",
                    TopicId=2
                 },
                 //QUESSION 4 TOPIC ２
                 new Question()
                 {
-                    QuestionTitle="ホセさんの（傘）はどれですか。",
+                    QuestionTitle="4. ホセさんの（傘）はどれですか。",
                     Answer="かさ",
                    TopicId=2
                 },
                 //QUESSION 5 TOPIC 2
                 new Question()
                 {
-                    QuestionTitle="富士山は高い山です。そしてきれいな山です。",
+                    QuestionTitle="5. 富士山は高い山です。そしてきれいな山です。",
                     Answer="たかい",
                    TopicId=2
                 },
                 //QUESSION 6 TOPIC 2
                 new Question()
                 {
-                    QuestionTitle="あの（赤い）かばんはだれのですか。",
+                    QuestionTitle="6. あの（赤い）かばんはだれのですか。",
                     Answer="あかい",
                     TopicId=2
                 },
                 //QUESSION 7 TOPIC 2
                 new Question()
                 {
-                    QuestionTitle="この町まちは (夜) とてもにぎやかですか。",
+                    QuestionTitle="7. この町まちは (夜) とてもにぎやかですか。",
                     Answer="よる",
                    TopicId=2
                 },
                 //QUESSION 8 TOPIC 2
                 new Question()
                 {
-                    QuestionTitle="あのレストランは (安い) ですが、おいしくないです。",
+                    QuestionTitle="8. あのレストランは (安い) ですが、おいしくないです。",
                     Answer="やすい",
                    TopicId=2
                 },
                 //QUESSION 9 TOPIC 2
                 new Question()
                 {
-                    QuestionTitle="毎朝まいあさ冷つめたいジュースを (飲みます) 。",
+                    QuestionTitle="9. 毎朝まいあさ冷つめたいジュースを (飲みます) 。",
                     Answer="のみます",
                    TopicId=2
                 },
                 //QUESSION 10 TOPIC 2
                 new Question()
                 {
-                    QuestionTitle="デパートでワインを買かいます。それからレストランで (晩ご飯) を食たべます。",
+                    QuestionTitle="10. デパートでワインを買かいます。それからレストランで (晩ご飯) を食たべます。",
                     Answer="ばんごはん",
                    TopicId=2
                 },
                 //////QUESTION OF TOPIC 3/////////////////////////////////////////////////////
                 new Question()
                 {
-                    QuestionTitle="あなたのカメラは (大きい) ですか。",
+                    QuestionTitle="1. あなたのカメラは (大きい) ですか。",
                     Answer="おおきい",
                     TopicId=3,
                 },
                 //QUESSION 2 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="（白い) 花はなを買かいました。",
+                    QuestionTitle="2.（白い) 花はなを買かいました。",
                     Answer="しろい",
                    TopicId=3
                 },
                 //QUESSION 3 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle=" (荷物) を送おくります。",
+                    QuestionTitle="3. (荷物) を送おくります。",
                     Answer="にもつ",
                    TopicId=3
                 },
                 //QUESSION 4 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="日本にほんの (食べ物) はおいしいです。",
+                    QuestionTitle="4. 日本にほんの (食べ物) はおいしいです。",
                     Answer="たべもの",
                    TopicId=3
                 },
                 //QUESSION 5 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="銀行ぎんこうの (右) に学校がっこうがあります。",
+                    QuestionTitle="5. 銀行ぎんこうの (右) に学校がっこうがあります。",
                     Answer="みぎ",
                    TopicId=3
                 },
                 //QUESSION 6 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="郵便局ゆうびんきょくはスーパーの (近く) です。",
+                    QuestionTitle="6. 郵便局ゆうびんきょくはスーパーの (近く) です。",
                     Answer="ちかく",
                     TopicId=3
                 },
                 //QUESSION 7 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="駅えきの前まえに白しろいビルがあります。そして駅えきの (後ろ )に大おおきいデパートがあります。",
+                    QuestionTitle="7. 駅えきの前まえに白しろいビルがあります。そして駅えきの (後ろ )に大おおきいデパートがあります。",
                     Answer="うしろ",
                    TopicId=3
                 },
                 //QUESSION 8 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="テーブルの上うえに (手紙) があります。",
+                    QuestionTitle="8. テーブルの上うえに (手紙) があります。",
                     Answer="てがみ",
                    TopicId=3
                 },
                 //QUESSION 9 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="男おとこの子こと女おんなの子この間あいだに (犬) がいます。",
+                    QuestionTitle="9. 男おとこの子こと女おんなの子この間あいだに (犬) がいます。",
                     Answer="いぬ",
                    TopicId=3
                 },
                 //QUESSION 10 TOPIC 3
                 new Question()
                 {
-                    QuestionTitle="スーパーの (中) に花屋はなやがあります。",
+                    QuestionTitle="10. スーパーの (中) に花屋はなやがあります。",
                     Answer="なか",
                    TopicId=3
                 },
@@ -3783,7 +3783,7 @@ namespace MyWebsite.Core
                 var user = new ApplicationUser
                 {
                     Email = "admin@gmail.com",
-                    UserName = "Admin",
+                    UserName = "admin@gmail.com",
                     PasswordHash = passwordHasher.HashPassword("Abc@1234"),
                     EmailConfirmed = true,
                     PhoneNumber = "0944551356",
@@ -3803,7 +3803,7 @@ namespace MyWebsite.Core
                 var user = new ApplicationUser
                 {
                     Email = "member@gmail.com",
-                    UserName = "Member",
+                    UserName = "member@gmail.com",
                     EmailConfirmed = true,
                     PhoneNumber = "0944551356",
                     PhoneNumberConfirmed = true,
@@ -3822,7 +3822,7 @@ namespace MyWebsite.Core
                 var user = new ApplicationUser
                 {
                     Email = "manager@gmail.com",
-                    UserName = "Manager",
+                    UserName = "manager@gmail.com",
                     EmailConfirmed = true,
                     PhoneNumber = "0944551356",
                     PhoneNumberConfirmed = true,

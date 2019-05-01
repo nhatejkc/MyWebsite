@@ -1,0 +1,9 @@
+﻿@using MyWebsite.Core.Models
+@model IEnumerable<MyWebsite.Core.Models.Question>
+
+@foreach (var item in Model)
+{
+    <h2 class="mt-1">@item.QuestionTitle</h2>
+    @Html.Action("GetQuestionItemByQuestionId", "HomeMember",new { id = item.Id })
+}
+

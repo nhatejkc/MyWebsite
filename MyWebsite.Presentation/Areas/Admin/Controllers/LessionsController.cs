@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -47,10 +48,11 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,MainConent,SoundLession,Sound,LessionShortDescription,PostOn,Modifie")] Lession lession)
+        public ActionResult Create(Lession lession)
         {
             if (ModelState.IsValid)
             {
+                lession.PostOn = DateTime.Now;
                 db.Lessions.Add(lession);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -89,7 +91,28 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
             }
             return View(lession);
         }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult SaveItem(Lession lession)
+        {
+            if (ModelState.IsValid)
+            {
+                lession.Modifie = DateTime.Now;
+                db.Lessions.AddOrUpdate(lession);
+                //db.Entry(post).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(lession);
+        }
+        public ActionResult DeleteItem(int id)
+        {
+            var item = db.Lessions.Find(id);
+            db.Lessions.Remove(item);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         // GET: Admin/Lessions/Delete/5
         public ActionResult Delete(int? id)
         {

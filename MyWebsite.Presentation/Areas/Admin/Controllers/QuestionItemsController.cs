@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -94,7 +95,27 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
             ViewBag.QuestionId = new SelectList(db.Questions, "Id", "QuestionTitle", questionItem.QuestionId);
             return View(questionItem);
         }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult SaveItem(QuestionItem questionItem)
+        {
+            if (ModelState.IsValid)
+            {
+                db.QuestionItems.AddOrUpdate(questionItem);
+                //db.Entry(post).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(questionItem);
+        }
+        public ActionResult DeleteItem(int id)
+        {
+            var item = db.QuestionItems.Find(id);
+            db.QuestionItems.Remove(item);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         // GET: Admin/QuestionItems/Delete/5
         public ActionResult Delete(int? id)
         {

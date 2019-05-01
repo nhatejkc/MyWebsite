@@ -1,0 +1,11 @@
+﻿@using MyWebsite.Core.Models
+@model IEnumerable<MyWebsite.Core.Models.QuestionItem>
+
+<div style="font-size:20px; color:black">
+    @foreach (var item in Model)
+    {
+        <input type="radio" name="@item.QuestionId" /> @item.Title
+    }
+</div>
+
+

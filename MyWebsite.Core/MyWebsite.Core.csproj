@@ -94,7 +94,10 @@
     <Compile Include="Services\IBaseService.cs" />
     <Compile Include="Services\ISoundConservationsService.cs" />
     <Compile Include="Services\LessionService.cs" />
+    <Compile Include="Services\QuestionItemService.cs" />
+    <Compile Include="Services\QuestionService.cs" />
     <Compile Include="Services\SoundConservationsService.cs" />
+    <Compile Include="Services\TopicService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

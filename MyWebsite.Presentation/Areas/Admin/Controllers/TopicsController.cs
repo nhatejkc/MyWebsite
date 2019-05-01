@@ -105,9 +105,9 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
             }
             return View(topic);
         }
-        public ActionResult DeleteItem(Topic topic)
+        public ActionResult DeleteItem(int id)
         {
-            var item = db.Topics.Find(topic.Id);
+            var item = db.Topics.Find(id);
             db.Topics.Remove(item);
             db.SaveChanges();
             return RedirectToAction("Index");
