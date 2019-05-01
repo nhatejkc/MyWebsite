@@ -49,7 +49,6 @@ namespace MyWebsite.Presentation.Controllers
         public ActionResult LessionDetails(int id)
         {
             var lessionDetails = _lessionService.GetById(id);
-            //var ss = _soundConservations.GetSoundConservationsByLession(id);
             return View(lessionDetails);
         }
     }

@@ -17,5 +17,6 @@
     @Html.Partial("_FooterPartial")
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     @Scripts.Render("~/Content/js")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

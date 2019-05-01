@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MyWebsite.Core.Models;
 using MyWebsite.Presentation.Models;
 
 namespace MyWebsite.Presentation.Controllers

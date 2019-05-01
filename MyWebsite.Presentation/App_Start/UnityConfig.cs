@@ -1,9 +1,11 @@
 using MyWebsite.Core;
 using MyWebsite.Core.Models;
 using MyWebsite.Core.Services;
+using MyWebsite.Presentation.Controllers;
 using System;
 
 using Unity;
+using Unity.Injection;
 
 namespace MyWebsite.Presentation
 {
@@ -49,7 +51,10 @@ namespace MyWebsite.Presentation
             container.RegisterType<IGenericRepository<Actor>, GenericRepository<Actor>>();
             container.RegisterType<IGenericRepository<Grammar>, GenericRepository<Grammar>>();
             container.RegisterType<IGenericRepository<SoundConservation>, GenericRepository<SoundConservation>>();
-
+            container.RegisterType<AccountController>(new InjectionConstructor());
+            container.RegisterType<ManageController>(new InjectionConstructor());
+            //container.RegisterType<UsersAdminController>(new InjectionConstructor());
+            //container.RegisterType<RolesAdminController>(new InjectionConstructor());
             container.RegisterType<ISoundConservationsService, SoundConservationsService>();
             
         }

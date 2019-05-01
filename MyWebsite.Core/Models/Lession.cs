@@ -17,8 +17,8 @@ namespace MyWebsite.Core.Models
         public string LessionShortDescription { get; set; }
         public DateTime PostOn { get; set; }
         public DateTime? Modifie { get; set; }
-
-        public virtual IList<Image> Images { get; set; }
+        [Required(ErrorMessage = "Images is required.")]
+        public string Images { get; set; }
         public virtual IList<Grammar> Grammars { get; set; }
         public virtual IList<SoundConservation> SoundConservations { get; set; }
     }

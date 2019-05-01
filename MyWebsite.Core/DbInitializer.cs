@@ -1,20 +1,17 @@
-﻿using MyWebsite.Core.Models;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using MyWebsite.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyWebsite.Core
 {
     public class DbInitializer : DropCreateDatabaseIfModelChanges<MyWebsiteDbContext>
     {
         protected override void Seed(MyWebsiteDbContext context)
-        {
-            SeedData(context);
-            base.Seed(context);
-        }
-
-        private static void SeedData(MyWebsiteDbContext context)
         {
             #region Add Actor
             var actors = new List<Actor>()
@@ -97,7 +94,7 @@ namespace MyWebsite.Core
                     Modifie=null
                 }
             };
-            actors.ForEach(s => context.Actors.Add(s));
+            context.Actors.AddRange(actors);
             context.SaveChanges();
             #endregion
 
@@ -111,6 +108,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/01-vi-le_03.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le1_v_scall.mp3",
                     MainConent="わしわアンナデス(WATASHI WA ANNA DESU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -121,6 +119,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/02-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le2_v_scall.mp3",
                     MainConent="これは何ですか(KORE WA NAN DESU KA)",
+                    Images="/Content/Images/le1_mp_02.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -131,6 +130,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/03-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le3_v_scall.mp3",
                     MainConent="トイレはどこですか(TOIRE WA DOKO DESU KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -141,6 +141,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/04-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le4_v_scall.mp3",
                     MainConent="ただいま(TADAIMA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -151,6 +152,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/05-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le5_v_scall.mp3",
                     MainConent="それは私の宝物です。私は毎日マンガを読みます(SORE WA WATASHI NO TAKARAMONO DESU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -161,6 +163,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/06-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le6_v_scall.mp3",
                     MainConent="電話番号は何番ですか(DENWABANGÔ WA NANBAN DESU KA)",
+                    Images="/Content/Images/le1_mp_06.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -171,6 +174,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/07-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le7_v_scall.mp3",
                     MainConent="シュークリームを２つください(SHÛKURÎMU O FUTATSU KUDASAI)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -181,6 +185,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/08-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le8_v_scall.mp3",
                     MainConent="もう一度お願いします(MÔICHIDO ONEGAI SHIMASU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -191,6 +196,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/09-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le9_v_scall.mp3",
                     MainConent="何時からですか(NANJI KARA DESU KA)",
+                    Images="/Content/Images/le1_mp_09.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -201,6 +207,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/10-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le10_v_scall.mp3",
                     MainConent="全員いますか(ZEN-IN IMASU KA)",
+                    Images="/Content/Images/le1_mp_10.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -211,6 +218,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/11-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le11_v_scall.mp3",
                     MainConent="ぜひ来てください(ZEHI KITE KUDASAI)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -221,6 +229,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/12-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le12_v_scall.mp3",
                     MainConent="いつ日本に来ましたか(ITSU NIHON NI KIMASHITA KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -231,6 +240,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/13-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le13_v_scall.mp3",
                     MainConent="小説が好きです(SHÔSETSU GA SUKI DESU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -241,6 +251,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/14-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le14_v_scall.mp3",
                     MainConent="ここにゴミを捨ててもいいですか(KOKO NI GOMI O SUTETE MO IIDESU KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -251,6 +262,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/15-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le15_v_scall.mp3",
                     MainConent="寝ています(NETE IMASU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -261,6 +273,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/16-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le16_v_scall.mp3",
                     MainConent="階段を上がって、右に行ってください(KAIDAN O AGATTE, MIGI NI ITTE KUDASAI)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -271,6 +284,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/17-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le17_v_scall.mp3",
                     MainConent="おすすめは何ですか(OSUSUME WA NAN DESU KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -281,6 +295,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/18-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le18_v_scall.mp3",
                     MainConent="道に迷ってしまいました(MICHI NI MAYOTTE SHIMAIMASHITA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -291,6 +306,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/19-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le19_v_scall.mp3",
                     MainConent="よかった(YOKATTA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -301,6 +317,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/20-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le20_v_scall.mp3",
                     MainConent="日本の歌を歌ったことがありますか(NIHON NO UTA O UTATTA KOTO GA ARIMASU KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -311,6 +328,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/21-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le21_v_scall.mp3",
                     MainConent="いいえ、それほどでも(IIE, SOREHODODEMO)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -321,6 +339,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/22-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le22_v_scall.mp3",
                     MainConent="遅くなりました(OSOKU NARIMASHITA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -331,6 +350,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/23-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le23_v_scall.mp3",
                     MainConent="お母さんに叱られました(OKÂSAN NI SHIKARAREMASHITA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -341,6 +361,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/24-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le24_v_scall.mp3",
                     MainConent="使わないでください(TSUKAWANAIDE KUDASAI)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -351,6 +372,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/25-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le25_v_scall.mp3",
                     MainConent="机の下に入れ(TSUKUE NO SHITA NI HAIRE)",
+                    Images="/Content/Images/le1_mp_25.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -361,6 +383,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/26-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le26_v_scall.mp3",
                     MainConent="次はがんばろう(TSUGI WA GANBARÔ)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -371,6 +394,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/27-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le27_v_scall.mp3",
                     MainConent="誰が結婚するんですか(DARE GA KEKKON SURU N DESU KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -381,6 +405,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/28-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le28_v_scall.mp3",
                     MainConent="静岡へようこそ(SHIZUOKA E YÔKOSO)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -390,6 +415,7 @@ namespace MyWebsite.Core
                     LessionShortDescription="Chị Anna đến thăm thành phố Shizuoka, quê hương chị Sakura. Hôm nay, chị được anh Kenta, em họ chị Sakura, đưa đến điểm có thể ngắm nhìn cảnh quan hùng vĩ của núi Phú Sĩ",
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/29-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le29_v_scall.mp3",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     MainConent="近くで見ると、大きいですね(CHIKAKU DE MIRU TO, ÔKII DESU NE)",
                     PostOn=DateTime.Now,
                     Modifie=null
@@ -401,6 +427,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/30-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le30_v_scall.mp3",
                     MainConent="もう少し写真を撮りたいです(MÔ SUKOSHI SHASHIN O TORITAI DESU)",
+                    Images ="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -411,6 +438,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/31-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le31_v_scall.mp3",
                     MainConent="もう８２歳ですよ(MÔ HACHIJÛNI SAI DESU YO)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -421,6 +449,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/32-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le32_v_scall.mp3",
                     MainConent="布団のほうが好きです(FUTON NO HÔ GA SUKI DESU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -431,6 +460,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/33-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le33_v_scall.mp3",
                     MainConent="アンナさんにあげます(ANNA-SAN NI AGEMASU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -441,6 +471,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/34-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le34_v_scall.mp3",
                     MainConent="やわらかくておいしいです(YAWARAKAKUTE OISHII DESU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -451,6 +482,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/35-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le35_v_scall.mp3",
                     MainConent="クレジットカードは使えますか(KUREJITTO KÂDO WA TSUKAEMASU KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -461,6 +493,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/36-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le36_v_scall.mp3",
                     MainConent="勉強しなければなりません(BENKYÔ SHINAKEREBA NARIMASEN)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -471,6 +504,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/37-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le37_v_scall.mp3",
                     MainConent="富士山を見たり、おすしを食べたりしました(FUJISAN O MITARI, OSUSHI O TABETARI SHIMASHITA)",
+                    Images="/Content/Images/le1_mp_37.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -481,6 +515,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/38-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le38_v_scall.mp3",
                     MainConent="かしこまりました(KASHIKOMARIMASHITA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -491,6 +526,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/39-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le39_v_scall.mp3",
                     MainConent="かぜだと思います(KAZE DA TO OMOIMASU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -501,6 +537,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/40-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le40_v_scall.mp3",
                     MainConent="頭がずきずきします(ATAMA GA ZUKIZUKI SHIMASU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -511,6 +548,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/41-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le41_v_scall.mp3",
                     MainConent="学園祭に行くことができて、楽しかったです(KGAKUEN-SAI NI IKU KOTO GA DEKITE, TANOSHIKATTA DESU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -521,6 +559,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/42-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le42_v_scall.mp3",
                     MainConent="どれがいちばんおいしいかな(DORE GA ICHIBAN OISHII KANA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -531,6 +570,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/43-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le43_v_scall.mp3",
                     MainConent="どうしてでしょうか(DÔSHITE DESHÔ KA)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -541,6 +581,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/44-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le44_v_scall.mp3",
                     MainConent="和菓子を食べてから、抹茶を飲みます(WAGASHI O TABETE KARA, MACCHA O NOMIMASU.)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -551,6 +592,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/45-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le45_v_scall.mp3",
                     MainConent="お誕生日おめでとう(OTANJÔBI OMEDETÔ)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -561,6 +603,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/46-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le46_v_scall.mp3",
                     MainConent="帰国する前に、雪を見ることができて幸せです(KIKOKU SURU MAE NI, YUKI O MIRU KOTO GA DEKITE SHIAWASE DESU)",
+                    Images="/Content/Images/le1_mp_01.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -571,6 +614,7 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/47-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le47_v_scall.mp3",
                     MainConent="日本語教師になるのが夢です(NIHONGO-KYÔSHI NI NARU NO GA YUME DESU)",
+                    Images="/Content/Images/le1_mp_47.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 },
@@ -581,11 +625,12 @@ namespace MyWebsite.Core
                     SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/48-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le48_v_scall.mp3",
                     MainConent="いろいろお世話になりました(IROIRO OSEWA NI NARIMASHITA)",
+                    Images="/Content/Images/le1_mp_48.jpg",
                     PostOn=DateTime.Now,
                     Modifie=null
                 }
             };
-            lessions.ForEach(x => context.Lessions.Add(x));
+            context.Lessions.AddRange(lessions);
             context.SaveChanges();
             #endregion
 
@@ -1034,7 +1079,7 @@ namespace MyWebsite.Core
                     Modifie=null
                 },
             };
-            grammars.ForEach(x => context.Grammars.Add(x));
+            context.Grammars.AddRange(grammars);
             context.SaveChanges();
             #endregion
 
@@ -2808,7 +2853,7 @@ namespace MyWebsite.Core
                     Modifie=null
                 },
             };
-            soundConservations.ForEach(x => context.SoundConservations.Add(x));
+            context.SoundConservations.AddRange(soundConservations);
             context.SaveChanges();
             #endregion
 
@@ -2857,7 +2902,7 @@ namespace MyWebsite.Core
                 }
             };
 
-            topics.ForEach(x => context.Topics.Add(x));
+            context.Topics.AddRange(topics);
             context.SaveChanges();
             #endregion
 
@@ -2886,7 +2931,7 @@ namespace MyWebsite.Core
                    TopicId=1
                 },
                 //QUESSION 4 TOPIC 1
-                new Question() 
+                new Question()
                 {
                     QuestionTitle="学校は (午後) 一時五十分からです。",
                     Answer="ごご",
@@ -3075,7 +3120,7 @@ namespace MyWebsite.Core
                    TopicId=3
                 },
             };
-            questions.ForEach(x => context.Questions.Add(x));
+            context.Questions.AddRange(questions);
             context.SaveChanges();
             #endregion
 
@@ -3713,9 +3758,83 @@ namespace MyWebsite.Core
                     QuestionId=30,
                 },
             };
-            questionItems.ForEach(x => context.QuestionItems.Add(x));
+            context.QuestionItems.AddRange(questionItems);
+            //questionItems.ForEach(x => context.QuestionItems.Add(x));
             context.SaveChanges();
             #endregion
+            //base.Seed(context);
+            Task.Run(async () => { await SeedAsync(context); }).Wait();
+        }
+        private async Task SeedAsync(MyWebsiteDbContext context)
+        {
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var passwordHasher = new Microsoft.AspNet.Identity.PasswordHasher();
+
+            if (!roleManager.Roles.Any())
+            {
+                await roleManager.CreateAsync(new IdentityRole("Admin"));
+                await roleManager.CreateAsync(new IdentityRole("Members"));
+                await roleManager.CreateAsync(new IdentityRole("Manager"));
+            }
+
+            if (!userManager.Users.Any(u => u.UserName == "admin@gmail.com"))
+            {
+                var user = new ApplicationUser
+                {
+                    Email = "admin@gmail.com",
+                    UserName = "Admin",
+                    PasswordHash = passwordHasher.HashPassword("Abc@1234"),
+                    EmailConfirmed = true,
+                    PhoneNumber = "0944551356",
+                    PhoneNumberConfirmed = true,
+                    LockoutEnabled = true,
+                    AccessFailedCount = 0,
+                    TwoFactorEnabled = false,
+                    SecurityStamp = Guid.NewGuid().ToString("D")
+                };
+
+                await userManager.CreateAsync(user, "Abc@1234");
+                await userManager.AddToRoleAsync(user.Id, "Admin"); 
+            }
+
+            if (!userManager.Users.Any(u => u.UserName == "member@gmail.com"))
+            {
+                var user = new ApplicationUser
+                {
+                    Email = "member@gmail.com",
+                    UserName = "Member",
+                    EmailConfirmed = true,
+                    PhoneNumber = "0944551356",
+                    PhoneNumberConfirmed = true,
+                    LockoutEnabled = true,
+                    AccessFailedCount = 0,
+                    TwoFactorEnabled = false,
+                    SecurityStamp = Guid.NewGuid().ToString("D")
+                };
+
+                await userManager.CreateAsync(user, "Abc@1234");
+                await userManager.AddToRoleAsync(user.Id, "Members");
+            }
+
+            if (!userManager.Users.Any(u => u.UserName == "manager@gmail.com"))
+            {
+                var user = new ApplicationUser
+                {
+                    Email = "manager@gmail.com",
+                    UserName = "Manager",
+                    EmailConfirmed = true,
+                    PhoneNumber = "0944551356",
+                    PhoneNumberConfirmed = true,
+                    LockoutEnabled = true,
+                    AccessFailedCount = 0,
+                    TwoFactorEnabled = false,
+                    SecurityStamp = Guid.NewGuid().ToString("D")
+                };
+
+                await userManager.CreateAsync(user, "Abc@1234");
+                await userManager.AddToRoleAsync(user.Id, "Manager");
+            }
         }
     }
 }
