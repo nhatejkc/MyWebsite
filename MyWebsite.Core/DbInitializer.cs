@@ -108,7 +108,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna là một du học sinh người Thái Lan. Hôm nay, chị Anna lần đầu tiên gặp chị Sakura, sinh viên hướng dẫn chị tại trường.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/02-vi-le_01.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/01-vi-le_03.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le1_v_scall.mp3",
                     MainConent="わしわアンナデス(WATASHI WA ANNA DESU)",
                     PostOn=DateTime.Now,
@@ -118,7 +118,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna, một du học sinh người Thái Lan, đã gặp chị Sakura, người hướng dẫn và cũng là sinh viên học cùng trường. Hai chị tự giới thiệu bản thân với nhau. Chị Anna đưa một vật cho chị Sakura",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/02-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/02-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le2_v_scall.mp3",
                     MainConent="これは何ですか(KORE WA NAN DESU KA)",
                     PostOn=DateTime.Now,
@@ -128,7 +128,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay, chị Sakura dẫn chị Anna đi quanh trường đại học.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/03-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/03-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le3_v_scall.mp3",
                     MainConent="トイレはどこですか(TOIRE WA DOKO DESU KA)",
                     PostOn=DateTime.Now,
@@ -138,7 +138,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay chị Anna dẫn chị Sakura về kí túc xá nơi chị ở. Người quản lý kí túc xá ra chào họ. Bà là người chăm nom các sinh viên ở kí túc xá, và gần như là một người mẹ của họ",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/04-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/04-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le4_v_scall.mp3",
                     MainConent="ただいま(TADAIMA)",
                     PostOn=DateTime.Now,
@@ -148,7 +148,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna mời chị Sakura, người hướng dẫn của mình, tới thăm phòng kí túc xá. Chị Sakura phát hiện thấy một cái gì đó",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/05-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/05-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le5_v_scall.mp3",
                     MainConent="それは私の宝物です。私は毎日マンガを読みます(SORE WA WATASHI NO TAKARAMONO DESU)",
                     PostOn=DateTime.Now,
@@ -158,7 +158,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna va chị Sakura tiếp tục trò chuyện trong phòng chị Anna. Chị Sakura muốn hỏi chị Anna số điện thoại của chị Anna",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/06-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/06-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le6_v_scall.mp3",
                     MainConent="電話番号は何番ですか(DENWABANGÔ WA NANBAN DESU KA)",
                     PostOn=DateTime.Now,
@@ -168,7 +168,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến hiệu bánh cùng với chị Sakura",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/07-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/07-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le7_v_scall.mp3",
                     MainConent="シュークリームを２つください(SHÛKURÎMU O FUTATSU KUDASAI)",
                     PostOn=DateTime.Now,
@@ -178,7 +178,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đang ở trong lớp tiếng Nhật của Giáo sư Suzuki ở trường",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/08-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/08-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le8_v_scall.mp3",
                     MainConent="もう一度お願いします(MÔICHIDO ONEGAI SHIMASU)",
                     PostOn=DateTime.Now,
@@ -188,7 +188,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay, Giáo sư Suzuki sẽ có một thông báo trước cả lớp.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/09-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/09-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le9_v_scall.mp3",
                     MainConent="何時からですか(NANJI KARA DESU KA)",
                     PostOn=DateTime.Now,
@@ -198,7 +198,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay, chị Anna có buổi khám sức khỏe tại trường đại học. Các sinh viên đã tập trung tại nơi khám sức khỏe",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/10-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/10-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le10_v_scall.mp3",
                     MainConent="全員いますか(ZEN-IN IMASU KA)",
                     PostOn=DateTime.Now,
@@ -208,7 +208,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Kí túc xá dành cho du học sinh nơi chị Anna sống sẽ có một bữa tiệc. Chị Anna mời chị Sakura tham dự",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/11-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/11-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le11_v_scall.mp3",
                     MainConent="ぜひ来てください(ZEHI KITE KUDASAI)",
                     PostOn=DateTime.Now,
@@ -218,7 +218,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay tại kí túc xá dành cho du học sinh mà chị Anna sống có một bữa tiệc dành cho các sinh viên người nước ngoài. Chị Anna giới thiệu anh Rodrigo, bạn cùng lớp người Mexico với chị Sakura",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/12-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/12-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le12_v_scall.mp3",
                     MainConent="いつ日本に来ましたか(ITSU NIHON NI KIMASHITA KA)",
                     PostOn=DateTime.Now,
@@ -228,7 +228,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Sakura và anh Rodrigo tiếp tục trò chuyện tại bữa tiệc tổ chức ở kí túc xá của sinh viên nước ngoài",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/13-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/13-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le13_v_scall.mp3",
                     MainConent="小説が好きです(SHÔSETSU GA SUKI DESU)",
                     PostOn=DateTime.Now,
@@ -238,7 +238,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Anna dọn dẹp mọi thứ sau bữa tiệc tại kí túc xá.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/14-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/14-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le14_v_scall.mp3",
                     MainConent="ここにゴミを捨ててもいいですか(KOKO NI GOMI O SUTETE MO IIDESU KA)",
                     PostOn=DateTime.Now,
@@ -248,7 +248,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna cùng chị Sakura và anh Rodrigo đi đến hiệu sách ở Shinjuku. Tàu chở họ đang chuẩn bị tới ga Shinjuku",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/15-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/15-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le15_v_scall.mp3",
                     MainConent="寝ています(NETE IMASU)",
                     PostOn=DateTime.Now,
@@ -258,7 +258,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến một hiệu sách ở Shinjuku với những người bạn. Chị hỏi người bán hàng xem quầy bán truyện tranh ở đâu",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/16-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/16-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le16_v_scall.mp3",
                     MainConent="階段を上がって、右に行ってください(KAIDAN O AGATTE, MIGI NI ITTE KUDASAI)",
                     PostOn=DateTime.Now,
@@ -268,7 +268,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Tại hiệu sách, chị Anna tìm thấy rất nhiều cuốn truyện tranh trông có vẻ hay. Chị không quyết định được là nên mua cuốn nào.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/17-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/17-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le17_v_scall.mp3",
                     MainConent="おすすめは何ですか(OSUSUME WA NAN DESU KA)",
                     PostOn=DateTime.Now,
@@ -278,7 +278,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến hiệu sách với chị Sakura và anh Rodrigo. Sau khi cả 3 rời hiệu sách, chị Anna lạc mất 2 người bạn của mình.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/18-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/18-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le18_v_scall.mp3",
                     MainConent="道に迷ってしまいました(MICHI NI MAYOTTE SHIMAIMASHITA)",
                     PostOn=DateTime.Now,
@@ -288,7 +288,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna lạc mất những người bạn của mình và gọi điện nhờ chị Sakura giúp đỡ. Liệu chị Anna có gặp được chị Sakura và anh Rodrigo không?",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/19-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/19-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le19_v_scall.mp3",
                     MainConent="よかった(YOKATTA)",
                     PostOn=DateTime.Now,
@@ -298,7 +298,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna và bạn bè đến hát tại quán karaoke.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/20-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/20-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le20_v_scall.mp3",
                     MainConent="日本の歌を歌ったことがありますか(NIHON NO UTA O UTATTA KOTO GA ARIMASU KA)",
                     PostOn=DateTime.Now,
@@ -308,7 +308,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Khi ở quán Karaoke, chị Anna hát một bài hát của Nhật Bản. Chị Sakura khen chị Anna hát hay.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/21-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/21-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le21_v_scall.mp3",
                     MainConent="いいえ、それほどでも(IIE, SOREHODODEMO)",
                     PostOn=DateTime.Now,
@@ -318,7 +318,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna và bạn bè đi hát Karaoke rất vui vẻ nên đã về muộn hơn giờ đóng cửa kí túc xá.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/22-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/22-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le22_v_scall.mp3",
                     MainConent="遅くなりました(OSOKU NARIMASHITA)",
                     PostOn=DateTime.Now,
@@ -328,7 +328,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna và chị Sakura đang nói chuyện với nhau ở trường. Chị Sakura hỏi thăm chị Anna về tình hình hôm đi về muộn",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/23-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/23-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le23_v_scall.mp3",
                     MainConent="お母さんに叱られました(OKÂSAN NI SHIKARAREMASHITA)",
                     PostOn=DateTime.Now,
@@ -338,7 +338,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đang trong lớp học tiếng Nhật của Giáo sư Suzuki. Giáo sư giải thích về bài kiểm tra vào tuần tới.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/24-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/24-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le24_v_scall.mp3",
                     MainConent="使わないでください(TSUKAWANAIDE KUDASAI)",
                     PostOn=DateTime.Now,
@@ -348,7 +348,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Khi chị Anna đang trong lớp tiếng Nhật của Giáo sư Suzuki thì tòa nhà bắt đầu rung lắc",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/25-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/25-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le25_v_scall.mp3",
                     MainConent="机の下に入れ(TSUKUE NO SHITA NI HAIRE)",
                     PostOn=DateTime.Now,
@@ -358,7 +358,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay, chị Anna nhận được kết quả bài kiểm tra tiếng Nhật. Sau giờ học, chị thấy bạn cùng lớp của mình là anh Rodrigo đứng ủ rũ ở một chỗ.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/26-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/26-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le26_v_scall.mp3",
                     MainConent="次はがんばろう(TSUGI WA GANBARÔ)",
                     PostOn=DateTime.Now,
@@ -368,7 +368,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến thăm nhà chị Sakura. Chị Sakura đưa cho chị xem một thiệp mời đám cưới.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/27-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/27-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le27_v_scall.mp3",
                     MainConent="誰が結婚するんですか(DARE GA KEKKON SURU N DESU KA)",
                     PostOn=DateTime.Now,
@@ -378,7 +378,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến thành phố Shizuoka với chị Sakura. Anh Kenta, em họ chị Sakura, ra ga đón họ.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/28-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/28-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le28_v_scall.mp3",
                     MainConent="静岡へようこそ(SHIZUOKA E YÔKOSO)",
                     PostOn=DateTime.Now,
@@ -388,7 +388,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến thăm thành phố Shizuoka, quê hương chị Sakura. Hôm nay, chị được anh Kenta, em họ chị Sakura, đưa đến điểm có thể ngắm nhìn cảnh quan hùng vĩ của núi Phú Sĩ",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/29-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/29-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le29_v_scall.mp3",
                     MainConent="近くで見ると、大きいですね(CHIKAKU DE MIRU TO, ÔKII DESU NE)",
                     PostOn=DateTime.Now,
@@ -398,7 +398,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đang chụp ảnh núi Phú Sĩ với chị Sakura và anh Kenta thì trời đổ mưa.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/30-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/30-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le30_v_scall.mp3",
                     MainConent="もう少し写真を撮りたいです(MÔ SUKOSHI SHASHIN O TORITAI DESU)",
                     PostOn=DateTime.Now,
@@ -408,7 +408,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến thăm nhà bà của chị Sakura ở thành phố Shizuoka. Bà còn rất khỏe mạnh. Bà sống một mình và ngày ngày chăm sóc vườn rau.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/31-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/31-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le31_v_scall.mp3",
                     MainConent="もう８２歳ですよ(MÔ HACHIJÛNI SAI DESU YO)",
                     PostOn=DateTime.Now,
@@ -418,7 +418,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna sẽ ngủ lại nhà bà của chị Sakura. Đây là lần đầu tiên chị Anna nằm ngủ trên đệm futon, một loại đệm của Nhật Bản.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/32-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/32-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le32_v_scall.mp3",
                     MainConent="布団のほうが好きです(FUTON NO HÔ GA SUKI DESU)",
                     PostOn=DateTime.Now,
@@ -428,7 +428,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đến lễ hội ở trường đại học cùng với em họ của chị Sakura là anh Kenta. Họ đang đi xem triển lãm của Câu lạc bộ Nhiếp ảnh.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/33-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/33-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le33_v_scall.mp3",
                     MainConent="アンナさんにあげます(ANNA-SAN NI AGEMASU)",
                     PostOn=DateTime.Now,
@@ -438,7 +438,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Sau khi chị Anna đến lễ hội ở trường đại học với anh Kenta, cả 2 cùng đến hiệu sushi băng chuyền",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/34-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/34-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le34_v_scall.mp3",
                     MainConent="やわらかくておいしいです(YAWARAKAKUTE OISHII DESU)",
                     PostOn=DateTime.Now,
@@ -448,7 +448,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna cùng với anh Kenta thưởng thức sushi tươi ngon tại quán sushi băng chuyền",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/35-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/35-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le35_v_scall.mp3",
                     MainConent="クレジットカードは使えますか(KUREJITTO KÂDO WA TSUKAEMASU KA)",
                     PostOn=DateTime.Now,
@@ -458,7 +458,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Sau những ngày đi chơi vui vẻ ở Shizuoka, chị Anna và chị Sakura chuẩn bị trở về Tokyo. Anh Kenta ra ga tiễn họ.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/36-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/36-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le36_v_scall.mp3",
                     MainConent="勉強しなければなりません(BENKYÔ SHINAKEREBA NARIMASEN)",
                     PostOn=DateTime.Now,
@@ -468,7 +468,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Sau chuyến đi chơi, chị Anna từ Shizuoka về kí túc xá ở Tokyo. Chị nói chuyện với người quản lí kí túc xá về chuyến đi.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/37-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/37-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le37_v_scall.mp3",
                     MainConent="富士山を見たり、おすしを食べたりしました(FUJISAN O MITARI, OSUSHI O TABETARI SHIMASHITA)",
                     PostOn=DateTime.Now,
@@ -478,7 +478,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Sáng nay khi thức dậy, chị Anna thấy mệt lử và bị sốt. Người quản lí kí túc xá đưa chị đến bệnh viện bằng taxi.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/38-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/38-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le38_v_scall.mp3",
                     MainConent="かしこまりました(KASHIKOMARIMASHITA)",
                     PostOn=DateTime.Now,
@@ -488,7 +488,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna không được khỏe và đã được người quản lí kí túc xá đưa đến bệnh viện để bác sĩ khám.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/39-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/39-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le39_v_scall.mp3",
                     MainConent="かぜだと思います(KAZE DA TO OMOIMASU)",
                     PostOn=DateTime.Now,
@@ -498,7 +498,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna bị cảm lạnh và đang nằm trong phòng. Người quản lí kí túc xá lo lắng vào hỏi thăm sức khỏe của chị.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/40-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/40-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le40_v_scall.mp3",
                     MainConent="頭がずきずきします(ATAMA GA ZUKIZUKI SHIMASU)",
                     PostOn=DateTime.Now,
@@ -508,7 +508,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đã hết cảm lạnh và khỏe lại. Hôm nay, chị viết email để cảm ơn anh Kenta, người đã đưa chị đi chơi quanh Shizuoka.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/41-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/41-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le41_v_scall.mp3",
                     MainConent="学園祭に行くことができて、楽しかったです(KGAKUEN-SAI NI IKU KOTO GA DEKITE, TANOSHIKATTA DESU)",
                     PostOn=DateTime.Now,
@@ -518,7 +518,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay, chị Anna tham gia chuyến tham quan học tập của trường. Chị chuẩn bị mua cơm hộp từ dịch vụ ăn uống trên tàu cao tốc Shinkansen.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/42-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/42-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le42_v_scall.mp3",
                     MainConent="どれがいちばんおいしいかな(DORE GA ICHIBAN OISHII KANA)",
                     PostOn=DateTime.Now,
@@ -528,7 +528,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Chị Anna đang trong chuyến tham quan học tập của trường đại học. Hôm nay, chị đến thăm Thành Himeji ở tỉnh Hyogo",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/43-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/43-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le43_v_scall.mp3",
                     MainConent="どうしてでしょうか(DÔSHITE DESHÔ KA)",
                     PostOn=DateTime.Now,
@@ -538,7 +538,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Sau khi đến thăm thành Himeji, chị Anna tham dự một buổi lễ trà đạo tại một trà thất ở gần đó",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/44-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/44-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le44_v_scall.mp3",
                     MainConent="和菓子を食べてから、抹茶を飲みます(WAGASHI O TABETE KARA, MACCHA O NOMIMASU.)",
                     PostOn=DateTime.Now,
@@ -548,7 +548,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="CHôm nay là sinh nhật chị Anna. Bạn bè tổ chức mừng sinh nhật chị tại một nhà hàng.",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/45-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/45-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le45_v_scall.mp3",
                     MainConent="お誕生日おめでとう(OTANJÔBI OMEDETÔ)",
                     PostOn=DateTime.Now,
@@ -558,7 +558,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Sau bữa tiệc sinh nhật của chị Anna, anh Kenta đề nghị được đưa chị về kí túc xá. Khi họ bắt đầu đi thì tuyết rơi",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/46-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/46-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le46_v_scall.mp3",
                     MainConent="帰国する前に、雪を見ることができて幸せです(KIKOKU SURU MAE NI, YUKI O MIRU KOTO GA DEKITE SHIAWASE DESU)",
                     PostOn=DateTime.Now,
@@ -568,7 +568,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Một năm du học của chị Anna chuẩn bị kết thúc. Hôm nay, chị tham dự tiết học cuối cùng tại trường đại học",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/47-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/47-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le47_v_scall.mp3",
                     MainConent="日本語教師になるのが夢です(NIHONGO-KYÔSHI NI NARU NO GA YUME DESU)",
                     PostOn=DateTime.Now,
@@ -578,7 +578,7 @@ namespace MyWebsite.Core
                 {
 
                     LessionShortDescription="Hôm nay, chị Anna chuẩn bị trở về Thái Lan. Chị Sakura và anh Kenta ra sân bay tiễn chị",
-                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/48-vi-le_02.mp3",
+                    SoundLession="https://www.nhk.or.jp/lesson/vietnamese/learn/mp3/48-vi-le_01.mp3",
                     Sound="https://www.nhk.or.jp/lesson/update/mp3/le48_v_scall.mp3",
                     MainConent="いろいろお世話になりました(IROIRO OSEWA NI NARIMASHITA)",
                     PostOn=DateTime.Now,
