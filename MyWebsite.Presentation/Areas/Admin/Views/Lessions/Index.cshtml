@@ -2,7 +2,7 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Actor</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Lession</h6>
     </div>
     <div class="card-body">
         <p>
@@ -17,6 +17,7 @@
                         @*<th>@Html.DisplayNameFor(model => model.Sound)</th>
                         <th>@Html.DisplayNameFor(model => model.SoundLession)</th>*@
                         <th>@Html.DisplayNameFor(model => model.LessionShortDescription)</th>
+                        <th>@Html.DisplayNameFor(model => model.Images)</th>
                         <th>@Html.DisplayNameFor(model => model.PostOn)</th>
                         <th>@Html.DisplayNameFor(model => model.Modifie)</th>
                         <th>Action</th>
@@ -31,11 +32,14 @@
                             @*<td>@item.Sound</td>
                             <td>@item.SoundLession</td>*@
                             <td>@item.LessionShortDescription</td>
+                            <td>
+                                <img src="@item.Images" width="100"/>
+                            </td>
                             <td>@item.PostOn</td>
                             <td>@item.Modifie</td>
                             <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info" })
-                                @Html.ActionLink("Delete", "DeleteItem", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger" })
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info fa fa-edit" })
+                                @Html.ActionLink("Delete", "DeleteItem", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger fa fa-trash" })
                             </td>
                         </tr>
                     }

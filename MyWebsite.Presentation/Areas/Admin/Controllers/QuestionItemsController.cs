@@ -41,7 +41,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
         // GET: Admin/QuestionItems/Create
         public ActionResult Create()
         {
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "QuestionTitle");
+            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Id");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "QuestionTitle", questionItem.QuestionId);
+            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Id", questionItem.QuestionId);
             return View(questionItem);
         }
 
@@ -75,7 +75,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "QuestionTitle", questionItem.QuestionId);
+            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Id", questionItem.QuestionId);
             return View(questionItem);
         }
 
@@ -92,7 +92,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "QuestionTitle", questionItem.QuestionId);
+            ViewBag.QuestionId = new SelectList(db.Questions, "Id", "Id", questionItem.QuestionId);
             return View(questionItem);
         }
         [HttpPost]

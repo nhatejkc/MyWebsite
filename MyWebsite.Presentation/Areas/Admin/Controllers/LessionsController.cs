@@ -48,7 +48,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Lession lession)
+        public ActionResult Create([Bind(Include = "Id,MainConent,SoundLession,Sound,LessionShortDescription,PostOn,Modifie,Images")] Lession lession)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,6 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [ValidateInput(false)]
         public ActionResult SaveItem(Lession lession)
         {
             if (ModelState.IsValid)

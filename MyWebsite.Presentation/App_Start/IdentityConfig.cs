@@ -12,9 +12,8 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using MyWebsite.Core;
 using MyWebsite.Core.Models;
-using MyWebsite.Presentation.Models;
 
-namespace MyWebsite.Presentation
+namespace MyWebsite.Presentation.Models
 {
     public class EmailService : IIdentityMessageService
     {
@@ -89,7 +88,18 @@ namespace MyWebsite.Presentation
             return manager;
         }
     }
+    public class ApplicationRoleManager : RoleManager<IdentityRole>
+    {
+        public ApplicationRoleManager(IRoleStore<IdentityRole, string> roleStore)
+            : base(roleStore)
+        {
+        }
 
+        public static ApplicationRoleManager Create(IdentityFactoryOptions<ApplicationRoleManager> options, IOwinContext context)
+        {
+            return new ApplicationRoleManager(new RoleStore<IdentityRole>(context.Get<MyWebsiteDbContext>()));
+        }
+    }
     // Configure the application sign-in manager which is used in this application.
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {
