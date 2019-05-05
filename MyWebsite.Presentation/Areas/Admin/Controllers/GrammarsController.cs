@@ -61,7 +61,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.LessionId = new SelectList(db.Lessions, "Id", "MainConent", grammar.LessionId);
+            ViewBag.LessionId = new SelectList(db.Lessions, "Id", "Id", grammar.LessionId);
             return View(grammar);
         }
 
@@ -77,7 +77,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LessionId = new SelectList(db.Lessions, "Id", "MainConent", grammar.LessionId);
+            ViewBag.LessionId = new SelectList(db.Lessions, "Id", "Id", grammar.LessionId);
             return View(grammar);
         }
 
@@ -96,7 +96,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.LessionId = new SelectList(db.Lessions, "Id", "MainConent", grammar.LessionId);
+            ViewBag.LessionId = new SelectList(db.Lessions, "Id", "Id", grammar.LessionId);
             return View(grammar);
         }
         [HttpPost]

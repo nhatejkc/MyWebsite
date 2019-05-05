@@ -33,6 +33,7 @@ namespace MyWebsite.Presentation
                      "~/Content/Theme/css/bootstrap.css",
                      "~/Content/Theme/css/flaticon.css",
                      "~/Content/Theme/css/style.css",
+                     
                      "~/Content/Theme/css/bootstrap.css",
                       "~/Content/Theme/vendors/owl-carousel/owl.carousel.min.css",
                       "~/Content/Theme/vendors/nice-select/css/nice-select.css"
@@ -41,6 +42,7 @@ namespace MyWebsite.Presentation
             bundles.Add(new StyleBundle("~/Content/js").Include(
                     "~/Content/Theme/js/jquery-3.2.1.min.js",
                     "~/Content/Theme/js/popper.js",
+                    "~/Scripts/respond.js",
                     "~/Content/Theme/js/bootstrap.min.js",
                     "~/Content/Theme/vendors/nice-select/js/jquery.nice-select.min.js",
                     "~/Content/Theme/vendors/owl-carousel/owl.carousel.min.js",

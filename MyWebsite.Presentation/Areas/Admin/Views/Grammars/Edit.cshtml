@@ -9,7 +9,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Grammar</h4>
         <hr />
@@ -43,7 +43,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PostOn, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PostOn, new { htmlAttributes = new { @class = "form-control" ,@readonly="true"} })
+                @Html.EditorFor(model => model.PostOn, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
                 @Html.ValidationMessageFor(model => model.PostOn, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -68,3 +68,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+@section scripts {
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/ckeditor/ckeditorconfig.js"></script>
+}

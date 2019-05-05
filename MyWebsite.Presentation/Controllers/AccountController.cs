@@ -124,7 +124,7 @@ namespace MyWebsite.Presentation.Controllers
             var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
-                case SignInStatus.Success:
+                case SignInStatus.Success: 
                     return RedirectToLocal(model.ReturnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");

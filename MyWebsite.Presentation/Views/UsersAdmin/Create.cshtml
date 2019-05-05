@@ -1,10 +1,9 @@
 ﻿@model MyWebsite.Presentation.Models.RegisterViewModel
 @{
     ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
 <h2>@ViewBag.Title.</h2>
-
 @using (Html.BeginForm("Create", "UsersAdmin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
@@ -47,7 +46,6 @@
         </div>
     </div>
 }
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

@@ -8,6 +8,22 @@
     <link rel="icon" href="./Content/Theme/img/favicon.png" type="image/png" />
     <title>Learning Japanese</title>
     <!-- Bootstrap CSS -->
+    <style type="text/css">
+
+        .Choices label {
+            background-color: #e0dfdf;
+            padding: 7px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            border: 1px solid #d0c9c9;
+        }
+
+        div .answer, .radio-inline {
+            font-weight: bold;
+        }
+    </style>
     @Styles.Render("~/Content/style")
     @*<script type="text/javascript" src="https://anonyviet.com/php/hoaroi/hoaroi.js"></script>*@
 </head>
@@ -17,6 +33,8 @@
     @Html.Partial("_FooterPartial")
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     @Scripts.Render("~/Content/js")
+    @RenderSection("CommentScripts", required: false)
     @RenderSection("scripts", required: false)
+    @RenderSection("MyScritps", required: false)
 </body>
 </html>

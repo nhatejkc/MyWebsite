@@ -1,9 +1,7 @@
 ﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
-
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Role</h6>
@@ -16,7 +14,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        
+
                         <th>@Html.DisplayNameFor(model => model.Name)</th>
                         <th>Action</th>
                     </tr>
@@ -25,7 +23,7 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                           
+
                             <td>@item.Name</td>
                             <td>
                                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info fa fa-edit" })

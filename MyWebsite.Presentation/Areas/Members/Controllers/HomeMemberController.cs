@@ -1,4 +1,6 @@
-﻿using MyWebsite.Core.Services;
+﻿using MyWebsite.Core;
+using MyWebsite.Core.Models;
+using MyWebsite.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +14,14 @@ namespace MyWebsite.Presentation.Areas.Members.Controllers
         private readonly TopicService _topicSevice;
         private readonly QuestionService _questionService;
         private readonly QuestionItemService _questionItemService;
+        private readonly MyWebsiteDbContext _dbContext;
 
-        public HomeMemberController(TopicService topicService, QuestionItemService questionItemService, QuestionService questionService)
+        public HomeMemberController(TopicService topicService, QuestionItemService questionItemService, QuestionService questionService, MyWebsiteDbContext dbContext)
         {
             _topicSevice = topicService;
             _questionItemService = questionItemService;
             _questionService = questionService;
+            _dbContext = dbContext;
         }
         // GET: Members/Home
         public ActionResult Index()
@@ -37,6 +41,26 @@ namespace MyWebsite.Presentation.Areas.Members.Controllers
         {
             var topicDetails = _topicSevice.GetById(id);
             return View(topicDetails);
+        }
+        [HttpPost]
+        public ActionResult QuizTest(List<Question> resultQuiz)
+        {
+            List<Question> finalResultQuiz = new List<Question>();
+
+            foreach (Question answser in resultQuiz)
+            {
+                Question result = _dbContext.Questions.Where(a => a.Answer == answser.Answer).Select(a => new Question
+                {
+                    Id = a.Id,
+                    Answer = a.Answer,
+                    //isCorrect = (answser.Answer.ToLower().Equals(a.AnswerText.ToLower()))
+
+                }).FirstOrDefault();
+
+                finalResultQuiz.Add(result);
+            }
+
+            return Json(new { result = finalResultQuiz }, JsonRequestBehavior.AllowGet);
         }
     }
 }

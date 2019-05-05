@@ -1,4 +1,5 @@
-﻿using MyWebsite.Core.Models;
+﻿using MyWebsite.Core;
+using MyWebsite.Core.Models;
 using MyWebsite.Core.Services;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,14 @@ namespace MyWebsite.Presentation.Controllers
         private readonly LessionService _lessionService;
         private readonly GrammarService _gramarService;
         private readonly SoundConservationsService _soundConservations;
-        public HomeController(LessionService lessionService,GrammarService grammarService,SoundConservationsService soundConservations)
+        private readonly MyWebsiteDbContext _dbContext;
+
+        public HomeController(LessionService lessionService,GrammarService grammarService,SoundConservationsService soundConservations, MyWebsiteDbContext dbContext)
         {
             _lessionService = lessionService;
             _gramarService = grammarService;
             _soundConservations = soundConservations;
+            _dbContext = dbContext;
         }
         // GET: Post
         public ActionResult Index()
@@ -50,6 +54,21 @@ namespace MyWebsite.Presentation.Controllers
         {
             var lessionDetails = _lessionService.GetById(id);
             return View(lessionDetails);
+        }
+        [HttpPost]
+        public ActionResult CreateComment(Comment comment,int id)
+        {
+            comment.CommentTime = DateTime.Now;
+            comment.LessionId = id;
+            _dbContext.Comments.Add(comment);
+            _dbContext.SaveChanges();
+            string message = "SUCCESS";
+            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
+        }
+        public JsonResult GetComments(int id)
+        {
+            var comments = _dbContext.Comments.Where(x=>x.LessionId==id);
+            return Json(comments, JsonRequestBehavior.AllowGet);
         }
     }
 }

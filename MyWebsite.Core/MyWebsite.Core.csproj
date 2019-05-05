@@ -78,6 +78,7 @@
     <Compile Include="DbInitializer.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Grammar.cs" />
     <Compile Include="Models\Lession.cs" />
     <Compile Include="Models\Question.cs" />

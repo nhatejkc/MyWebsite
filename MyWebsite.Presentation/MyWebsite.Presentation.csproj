@@ -619,6 +619,7 @@
     <Content Include="Content\Images\le1_mp_37.jpg" />
     <Content Include="Content\Images\le1_mp_47.jpg" />
     <Content Include="Content\Images\le1_mp_48.jpg" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Theme\css\font-awesome.css" />
     <Content Include="Content\Theme\img\banner\japan.jpg" />
@@ -2485,9 +2486,6 @@
     <Content Include="Areas\Admin\Views\Grammars\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Grammars\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Grammars\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Lessions\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Lessions\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Lessions\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Questions\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Questions\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Questions\Index.cshtml" />
@@ -2522,6 +2520,10 @@
     <Content Include="Areas\Members\Views\HomeMember\_ListQuestion.cshtml" />
     <Content Include="Areas\Members\Views\HomeMember\_ListQuestionItem.cshtml" />
     <Content Include="Areas\Members\Views\HomeMember\TopicDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Lessions\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Lessions\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Lessions\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Lessions\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2533,6 +2535,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -50,6 +50,7 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "Id,QuestionTitle,Answer,TopicId")] Question question)
         {
             if (ModelState.IsValid)

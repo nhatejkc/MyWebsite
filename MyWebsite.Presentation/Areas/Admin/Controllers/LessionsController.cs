@@ -81,37 +81,18 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,MainConent,SoundLession,Sound,LessionShortDescription,PostOn,Modifie")] Lession lession)
+        public ActionResult Edit([Bind(Include = "Id,MainConent,SoundLession,Sound,LessionShortDescription,PostOn,Modifie,Images")] Lession lession)
         {
             if (ModelState.IsValid)
             {
+                lession.Modifie = DateTime.Now;
                 db.Entry(lession).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(lession);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult SaveItem(Lession lession)
-        {
-            if (ModelState.IsValid)
-            {
-                lession.Modifie = DateTime.Now;
-                db.Lessions.AddOrUpdate(lession);
-                //db.Entry(post).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(lession);
-        }
-        public ActionResult DeleteItem(int id)
-        {
-            var item = db.Lessions.Find(id);
-            db.Lessions.Remove(item);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+
         // GET: Admin/Lessions/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -137,7 +118,28 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
 
+        public ActionResult SaveItem(Lession lession)
+        {
+            if (ModelState.IsValid)
+            {
+                lession.Modifie = DateTime.Now;
+                db.Lessions.AddOrUpdate(lession);
+                //db.Entry(post).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(lession);
+        }
+        public ActionResult DeleteItem(Lession lession)
+        {
+            var item = db.Lessions.Find(lession.Id);
+            db.Lessions.Remove(item);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

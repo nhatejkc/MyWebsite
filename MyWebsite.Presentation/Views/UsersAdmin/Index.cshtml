@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MyWebsite.Core.Models.ApplicationUser>
 
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -15,7 +15,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        
+
                         <th>@Html.DisplayNameFor(model => model.UserName)</th>
                         <th>Action</th>
                     </tr>
@@ -24,7 +24,7 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                           
+
                             <td>@item.UserName</td>
                             <td>
                                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info fa fa-edit" })

@@ -6,10 +6,10 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Question</h4>
         <hr />
@@ -17,8 +17,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.QuestionTitle, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.QuestionTitle, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.QuestionTitle, "", new { @class = "text-danger" })
+                <textarea class="form-control" name="QuestionTitle" id="ckeditor"></textarea>
+                @Html.ValidationMessageFor(m => m.QuestionTitle, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -49,3 +49,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+@section scripts {
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/ckeditor/ckeditorconfig.js"></script>
+}

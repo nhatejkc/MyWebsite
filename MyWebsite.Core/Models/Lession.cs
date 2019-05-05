@@ -19,7 +19,10 @@ namespace MyWebsite.Core.Models
         public DateTime? Modifie { get; set; }
         [Required(ErrorMessage = "Images is required.")]
         public string Images { get; set; }
+
+
         public virtual IList<Grammar> Grammars { get; set; }
+        public virtual IList<Comment> Comments { get; set; }
         public virtual IList<SoundConservation> SoundConservations { get; set; }
     }
 }
