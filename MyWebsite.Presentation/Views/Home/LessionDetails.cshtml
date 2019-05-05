@@ -86,9 +86,6 @@
                         <label>Tên của bạn</label>
                         <input type="text" name="UserComment" id="UserComment" />
                         <textarea name="CommentContent" class="form-control" cols="10" rows="10" id="CommentContent"></textarea>
-                        <div class="mt-10 text-right">
-                            <input class="btn btn-primary" name="submitButton" id="btnSave" value="Gửi" type="button">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -99,8 +96,27 @@
 @section CommentScripts
 {
     <script type="text/javascript">
+        $(document).ready(function () {
+            $("#CommentContent").change(function () {
+                var content = $("#CommentContent").val();
+                $.ajax({
+                    url: "/Home/LessionDetails/",
+                    data: {
+                        request: content
+                    },
+                    dataType: "html",
+                    type: "GET",
+                    success: function (data) {
+                        $("#show").html(data);
+                    }
 
-    $(function () {
+                })
+
+            })
+
+
+        })
+    @*$(function () {
         LoadData();
         $("#btnSave").click(function () {
             //alert("");
@@ -150,6 +166,6 @@
             }
         });
         return false;
-    }
+    }*@
     </script>
 }  

@@ -98,7 +98,7 @@
                             <div class="course_content">
                                 <span class="price">@item.Id</span>
                                 <h4 class="mb-3">
-                                    @Html.ActionLink("Đi tới bài học", "LessionDetails", new { id = item.Id })
+                                    @Html.ActionLink("Đi tới bài học", "LessionDetails", new { id = item.Id },new {@class="btn btn-success" })
                                 </h4>
                                 <p>
                                     @item.LessionShortDescription

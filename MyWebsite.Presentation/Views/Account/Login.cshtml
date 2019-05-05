@@ -21,11 +21,11 @@
                                         </div>
                                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                         <div class="form-group">
-                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-user" })
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-user", @placeholder = "Nhập vào email" })
                                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
-                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-user" })
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-user", @placeholder = "Nhập mật khẩu của bạn" })
                                             @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
