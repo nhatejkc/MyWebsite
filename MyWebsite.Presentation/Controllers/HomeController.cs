@@ -53,22 +53,23 @@ namespace MyWebsite.Presentation.Controllers
         public ActionResult LessionDetails(int id)
         {
             var lessionDetails = _lessionService.GetById(id);
+            TempData["lessionid"] = id;
             return View(lessionDetails);
         }
-        [HttpPost]
-        public ActionResult CreateComment(Comment comment,int id)
+        public ActionResult Comment(string user,string content,int id)
         {
-            comment.CommentTime = DateTime.Now;
-            comment.LessionId = id;
-            _dbContext.Comments.Add(comment);
-            _dbContext.SaveChanges();
-            string message = "SUCCESS";
-            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
-        }
-        public JsonResult GetComments(int id)
-        {
-            var comments = _dbContext.Comments.Where(x=>x.LessionId==id);
-            return Json(comments, JsonRequestBehavior.AllowGet);
+            if (user!=null&& content!=null)
+            {
+                Comment cm = new Comment();
+                cm.UserComment = user;
+                cm.CommentContent = content;
+                cm.CommentTime = DateTime.Now;
+                cm.LessionId = id;
+                _dbContext.Comments.Add(cm);
+                _dbContext.SaveChanges();
+            }
+           
+            return PartialView(_dbContext.Comments.Where(x=>x.LessionId== id).ToList());
         }
     }
 }

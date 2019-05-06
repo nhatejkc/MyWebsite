@@ -70,22 +70,17 @@
                     <source src="@Model.SoundLession" />
                 </audio>
                 <h3 class="title">Nhận xét</h3>
-                <table id="tblStudent" class="table table-bordered table-striped table-responsive table-hover">
-                    <thead>
-                        <tr>
-                            <th align="left" class="productth">ID</th>
-                            <th align="left" class="productth">Student Name</th>
-                            <th align="left" class="productth">Student Address</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div id="show">
+                    @Html.Action("Comment", "Home",new {id=Model.Id })
+                </div>
                 <div class="content">
                     <div class="feedeback">
-                        <h5>Cảm nhận của bạn</h5>
+                        <h5>Thêm bình luận</h5>
+                        <input type="hidden" value=@Model.Id id="lessonid"/>
                         <label>Tên của bạn</label>
-                        <input type="text" name="UserComment" id="UserComment" />
-                        <textarea name="CommentContent" class="form-control" cols="10" rows="10" id="CommentContent"></textarea>
+                        <input name="UserComment" class="form-control" id="UserComment" />
+                        <label>Nội dung</label>
+                        <input name="CommentContent" class="form-control" id="CommentContent" />
                     </div>
                 </div>
             </div>
@@ -97,75 +92,31 @@
 {
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#CommentContent").change(function () {
-                var content = $("#CommentContent").val();
-                $.ajax({
-                    url: "/Home/LessionDetails/",
-                    data: {
-                        request: content
-                    },
-                    dataType: "html",
-                    type: "GET",
-                    success: function (data) {
-                        $("#show").html(data);
-                    }
 
-                })
+            $('#CommentContent').keypress(function (event) {
 
-            })
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    var content = $("#CommentContent").val();
+                    var user = $("#UserComment").val();
+                    var lesson = $("#lessonid").val();
+                    $.ajax({
+                        url: "/Home/Comment/",
+                        data: { user: user, content: content, id: lesson },
+                        dataType: "html",
+                        type: "GET",
+                        success: function (data) {
+                            $("#CommentContent").val("");
+                            $("#UserComment").val("");
+                            $("#show").html(data);
 
+                        }
 
-        })
-    @*$(function () {
-        LoadData();
-        $("#btnSave").click(function () {
-            //alert("");
-            var std = {};
-            std.studentName = $("#UserComment").val();
-            std.studentAddress = $("#CommentContent").val();
-            $.ajax({
-                type: "POST",
-                url: '@Url.Action("CreateComment", new { @id = Model.Id })',
-                data: '{std: ' + JSON.stringify(std) + '}',
-                dataType: "json",
-                contentType: "application/json; charset=utf-8",
-                success: function () {
-                   // alert("Data has been added successfully.");
-                    LoadData();
-                },
-                error: function () {
-                    alert("Error while inserting data");
+                    })
+
                 }
-            });
-            return false;
-        });
-    });
 
-    function LoadData() {
-        $("#tblStudent tbody tr").remove();
-        $.ajax({
-            type: 'POST',
-            url: '@Url.Action("GetComments",new {@id= Model.Id })',
-            dataType: 'json',
-            data: { id: '' },
-            success: function (data) {
-                var items = '';
-                $.each(data, function (i, item) {
-                    var rows = "<tr>"
-                    + "<td class='prtoducttd'>" + item.UserComment + "</td>"
-                    + "<td class='prtoducttd'>" + item.CommentContent + "</td>"
-                    + "</tr>";
-                    $('#tblStudent tbody').append(rows);
-                });
-            },
-            error: function (ex) {
-                var r = jQuery.parseJSON(response.responseText);
-                alert("Message: " + r.Message);
-                alert("StackTrace: " + r.StackTrace);
-                alert("ExceptionType: " + r.ExceptionType);
-            }
-        });
-        return false;
-    }*@
+            });
+        }
     </script>
 }  

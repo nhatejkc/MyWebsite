@@ -26,3 +26,4 @@ C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.cs
 C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.csproj.CopyComplete
 C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.dll
 C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.pdb
+C:\Users\Admin\source\repos\MyWebsite\MyWebsite.Core\obj\Debug\MyWebsite.Core.csprojAssemblyReference.cache

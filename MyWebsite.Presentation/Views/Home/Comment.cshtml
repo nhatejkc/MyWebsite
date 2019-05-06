@@ -1,0 +1,10 @@
+﻿
+@model List<MyWebsite.Core.Models.Comment>
+@foreach (var item in Model)
+{
+    <b>@item.UserComment</b>
+    <p>@item.CommentContent</p>
+    <i>Post on : @item.CommentTime.ToString("dd-MM-yy")</i>
+    <br />
+}
+

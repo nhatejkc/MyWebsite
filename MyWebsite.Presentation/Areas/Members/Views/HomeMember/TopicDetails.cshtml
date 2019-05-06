@@ -25,16 +25,20 @@
                     <div class="content">
                         @Html.Action("GetQuestionByTopic", "HomeMember")
                     </div>
-                    <h4 class="title">Feedback</h4>
-                    <div class="content mt-2">
-                        <div class="feedeback">
-                            <h6>Your Feedback</h6>
-                            <textarea name="feedback" class="form-control" cols="10" rows="10"></textarea>
-                            <div class="mt-10 text-right">
-                                <a href="#" class="primary-btn2 text-right rounded-0 text-white">Submit</a>
-                            </div>
-                        </div>
+                    @*<h3 class="title">Nhận xét</h3>
+                    <div id="show">
+                        @Html.Action("Comment", "Home", new { id = Model.Id })
                     </div>
+                    <div class="content">
+                        <div class="feedeback">
+                            <h5>Thêm bình luận</h5>
+                            <input type="hidden" value=@Model.Id id="lessonid" />
+                            <label>Tên của bạn</label>
+                            <input name="UserComment" class="form-control" id="UserComment" />
+                            <label>Nội dung</label>
+                            <input name="CommentContent" class="form-control" id="CommentContent" />
+                        </div>
+                    </div>*@
                 </div>
             </div>
         </div>

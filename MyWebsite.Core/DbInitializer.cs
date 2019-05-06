@@ -634,6 +634,22 @@ namespace MyWebsite.Core
             context.SaveChanges();
             #endregion
 
+            #region Add Comment
+            var comments = new List<Comment>()
+            {
+                new Comment()
+                {
+                    UserComment="Nguyen Van A",
+                    CommentContent="Bài học rất thú vị",
+                    LessionId=1,
+                    CommentTime= DateTime.Now
+                }
+            };
+
+            context.Comments.AddRange(comments);
+            context.SaveChanges();
+            #endregion
+
             #region Add Grammar
             var grammars = new List<Grammar>()
             {
@@ -3762,7 +3778,7 @@ namespace MyWebsite.Core
             //questionItems.ForEach(x => context.QuestionItems.Add(x));
             context.SaveChanges();
             #endregion
-            //base.Seed(context);
+            
             Task.Run(async () => { await SeedAsync(context); }).Wait();
         }
         private async Task SeedAsync(MyWebsiteDbContext context)
