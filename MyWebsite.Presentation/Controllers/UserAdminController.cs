@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.Owin;
+﻿
+using Microsoft.AspNet.Identity.Owin;
 using MyWebsite.Core.Models;
 using MyWebsite.Presentation.Models;
 using System.Data.Entity;
@@ -8,10 +9,9 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-
 namespace MyWebsite.Presentation.Controllers
 {
-    [Authorize(Roles = "Manager")]
+    [Authorize(Roles = "Admin")]
     public class UsersAdminController : Controller
     {
         public UsersAdminController()

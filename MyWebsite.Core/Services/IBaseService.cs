@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MyWebsite.Core
+namespace MyWebsite.Core.Services
 {
     public interface IBaseService<TEntity>
     {

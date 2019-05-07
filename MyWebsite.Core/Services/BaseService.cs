@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyWebsite.Core
+namespace MyWebsite.Core.Services
 {
     public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : class
     {

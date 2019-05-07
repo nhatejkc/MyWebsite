@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Collections.Generic;
-using MyWebsite.Core.Models;
 using MyWebsite.Presentation.Models;
+using MyWebsite.Core.Models;
 
 namespace MyWebsite.Presentation.Controllers
 {

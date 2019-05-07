@@ -14,6 +14,13 @@
             <li class="nav-item">
                 <a class="nav-link " href="/Home/Contact">Contact</a>
             </li>
+            @if (Request.IsAuthenticated && User.IsInRole("Members"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "HomeMember", new { Area = "Members" })">Khóa học của tôi</a>
+                </li>
+              
+            }
         </ul>
         <form class="form-inline my-2 my-lg-0">
             @Html.Partial("_LoginPartial")

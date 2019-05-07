@@ -80,7 +80,18 @@ namespace MyWebsite.Presentation.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    if (User.IsInRole("Admin")|| User.IsInRole("Manager"))
+                    {
+                        return RedirectToAction("Index", "Actors", new { area ="Admin"});
+                    }
+                    else if (User.IsInRole("Members"))
+                    {
+                        return RedirectToAction("Index", "HomeMember", new { area = "Members" });
+                    }
+                    else
+                    {
+                        return RedirectToLocal(returnUrl);
+                    }
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
