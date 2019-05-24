@@ -14,5 +14,6 @@ namespace MyWebsite.Core.Models
         public string TopicTitle { get; set; }
 
         public virtual IList<Question> Questions { get; set; }
+        public virtual IList<Comment> Comments { get; set; }
     }
 }

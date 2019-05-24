@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -48,10 +49,17 @@ namespace MyWebsite.Presentation.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,MainConent,SoundLession,Sound,LessionShortDescription,PostOn,Modifie,Images")] Lession lession)
+        public ActionResult Create(Lession lession, HttpPostedFileBase ImageFile)
         {
             if (ModelState.IsValid)
             {
+                string fileName = Path.GetFileNameWithoutExtension(ImageFile.FileName);
+                string extension = Path.GetExtension(ImageFile.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                lession.Images = "/Content/Images/" + fileName;
+                fileName = Path.Combine(Server.MapPath("/Content/Images/"), fileName);
+                ImageFile.SaveAs(fileName);
+
                 lession.PostOn = DateTime.Now;
                 db.Lessions.Add(lession);
                 db.SaveChanges();

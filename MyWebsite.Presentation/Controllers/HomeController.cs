@@ -1,6 +1,10 @@
-﻿using MyWebsite.Core;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
+using MyWebsite.Core;
 using MyWebsite.Core.Models;
 using MyWebsite.Core.Services;
+using MyWebsite.Presentation.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +15,42 @@ namespace MyWebsite.Presentation.Controllers
 {
     public class HomeController : Controller
     {
+        
+
         private readonly LessionService _lessionService;
         private readonly GrammarService _gramarService;
         private readonly SoundConservationsService _soundConservations;
         private readonly MyWebsiteDbContext _dbContext;
 
+        public IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Authentication;
+            }
+        }
         public HomeController(LessionService lessionService,GrammarService grammarService,SoundConservationsService soundConservations, MyWebsiteDbContext dbContext)
         {
+             
             _lessionService = lessionService;
             _gramarService = grammarService;
             _soundConservations = soundConservations;
             _dbContext = dbContext;
+          
         }
+        
         // GET: Post
-        public ActionResult Index()
+        public ActionResult Index(int? request)
         {
+            if(request==null)
+            {
+
+            }
+            else
+            {
+                AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+                return RedirectToAction("Index", "Home");
+            }
             var allLessions = _lessionService.GetAll();
             return View(allLessions);
         }
@@ -55,6 +80,11 @@ namespace MyWebsite.Presentation.Controllers
             var lessionDetails = _lessionService.GetById(id);
             TempData["lessionid"] = id;
             return View(lessionDetails);
+        }
+        public ActionResult GetAllLession()
+        {
+            var lessions = _lessionService.GetAll(); 
+            return PartialView("_ListLession",lessions);
         }
         public ActionResult Comment(string user,string content,int id)
         {

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MyWebsite.Core.Models.Comment>
+
+@{
+    ViewBag.Title = "Danh sách bình luận";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bình luận</h2>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Bình luận</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Mã bài học</th>
+                        <th>Mã đề thi</th>
+                        <th> Tên người bình luận</th>
+                        <th>Nội dung</th>
+                        <th>Thời gian</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.LessionId</td>
+                            <td>@item.TopicId</td>
+                            <td>@item.UserComment</td>
+                            <td>@item.CommentContent</td>
+                            <td>@item.CommentTime</td>
+
+                            <td>
+                                @Html.ActionLink("Details", "Details", new { id = item.CommentId }, htmlAttributes: new { @class = "btn btn-primary fa fa-info-circle" })
+                                @Html.ActionLink("Delete", "DeleteItem", new { id = item.CommentId }, htmlAttributes: new { @class = "btn btn-danger fa fa-trash" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

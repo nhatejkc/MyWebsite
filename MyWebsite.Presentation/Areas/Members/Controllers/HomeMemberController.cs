@@ -1,10 +1,10 @@
-﻿using MyWebsite.Core;
+﻿using Microsoft.AspNet.Identity;
+using MyWebsite.Core;
 using MyWebsite.Core.Models;
 using MyWebsite.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MyWebsite.Presentation.Areas.Members.Controllers
@@ -15,7 +15,7 @@ namespace MyWebsite.Presentation.Areas.Members.Controllers
         private readonly QuestionService _questionService;
         private readonly QuestionItemService _questionItemService;
         private readonly MyWebsiteDbContext _dbContext;
-
+        
         public HomeMemberController(TopicService topicService, QuestionItemService questionItemService, QuestionService questionService, MyWebsiteDbContext dbContext)
         {
             _topicSevice = topicService;
@@ -42,18 +42,41 @@ namespace MyWebsite.Presentation.Areas.Members.Controllers
             var topicDetails = _topicSevice.GetById(id);
             return View(topicDetails);
         }
-        [HttpPost]
-        public ActionResult QuizTest(List<Question> resultQuiz)
+        public ActionResult GetAll()
         {
-            List<Question> finalResultQuiz = new List<Question>();
-
-            foreach (Question answser in resultQuiz)
+            var topic = _topicSevice.GetAll();
+            return PartialView("_ListTopic",topic);
+        }
+        public ActionResult Comment(string user, string content, int id)
+        {
+            string currentUserId = User.Identity.GetUserId();
+            ApplicationUser currentUser = _dbContext.Users.FirstOrDefault(x => x.Id == currentUserId);
+            if (user != null && content != null)
             {
-                Question result = _dbContext.Questions.Where(a => a.Answer == answser.Answer).Select(a => new Question
+                Comment cm = new Comment();
+                cm.UserComment = currentUser.UserName.ToString();
+                cm.CommentContent = content;
+                cm.CommentTime = DateTime.Now;
+                cm.TopicId = id;
+                _dbContext.Comments.Add(cm);
+                _dbContext.SaveChanges();
+            }
+
+            return PartialView(_dbContext.Comments.Where(x => x.TopicId == id).ToList());
+        }
+
+        [HttpPost]
+        public ActionResult QuizTest(List<QuizAnswersVM> resultQuiz)
+        {
+            List<QuizAnswersVM> finalResultQuiz = new List<QuizAnswersVM>();
+
+            foreach (QuizAnswersVM answser in resultQuiz)
+            {
+                QuizAnswersVM result = _dbContext.Questions.Where(a => a.Id == answser.QuestionID).Select(a => new QuizAnswersVM
                 {
-                    Id = a.Id,
-                    Answer = a.Answer,
-                    //isCorrect = (answser.Answer.ToLower().Equals(a.AnswerText.ToLower()))
+                    QuestionID = a.Id,
+                    AnswerQ = a.Answer,
+                    isCorrect = (answser.AnswerQ.ToLower().Equals(a.Answer.ToLower()))
 
                 }).FirstOrDefault();
 

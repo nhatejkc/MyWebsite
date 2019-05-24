@@ -4,9 +4,8 @@
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-}
 
-<h2>Edit.</h2>
+<h2>Chỉnh sửa.</h2>
 
 
 @using (Html.BeginForm())
@@ -14,13 +13,13 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Roles.</h4>
+        <h4>Quyền truy cập</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+            @Html.Label("Tên quyền", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Name)
@@ -29,14 +28,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-info" />
+                <input type="submit" value="Lưu" class="btn btn-info" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Trở về danh sách", "Index")
 </div>
 
 @section Scripts {

@@ -2,25 +2,25 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">SoundConservation</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Hội thoại</h6>
     </div>
     <div class="card-body">
         <p>
-            @Html.ActionLink("Create New", "Create")
+            @Html.ActionLink("Tạo mới", "Create")
         </p>
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>@Html.DisplayNameFor(model => model.Id)</th>
-                        <th>@Html.DisplayNameFor(model => model.ActorId)</th>
-                        <th>@Html.DisplayNameFor(model => model.LessionId)</th>
-                        <th>@Html.DisplayNameFor(model => model.Japanese)</th>
-                        <th>@Html.DisplayNameFor(model => model.Romaji)</th>
-                        <th>@Html.DisplayNameFor(model => model.VietNamese)</th>
-                        <th>@Html.DisplayNameFor(model => model.PostOn)</th>
-                        <th>@Html.DisplayNameFor(model => model.Modifie)</th>
-                        <th>Action</th>
+                        <th>Mã hội thoại</th>
+                        <th>Mã nhân vật</th>
+                        <th>Mã bài học</th>
+                        <th>Tiếng Nhật</th>
+                        <th>Phiên âm</th>
+                        <th>Tiếng Việt</th>
+                        <th>Thời gian đăng</th>
+                        <th>Thời gian sửa</th>
+                        <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,8 +36,8 @@
                         <td>@item.PostOn</td>
                         <td>@item.Modifie</td>
                         <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info fa fa-edit" })
-                            @Html.ActionLink("Delete", "DeleteItem", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger fa fa-trash" })
+                            @Html.ActionLink("Sửa", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-info fa fa-edit" })
+                            @Html.ActionLink("Xóa", "DeleteItem", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger fa fa-trash" })
                         </td>
                     </tr>
                     }

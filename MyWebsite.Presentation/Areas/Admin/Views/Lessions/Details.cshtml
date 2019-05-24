@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết</h2>
 
 <div>
-    <h4>Lession</h4>
+    <h4>Bài học</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.MainConent)
+            Nội dung chính
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoundLession)
+            Âm thanh hội thoại
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Sound)
+            Âm thanh bài học
         </dt>
 
         <dd>
@@ -35,15 +35,14 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LessionShortDescription)
+            Mô tả bài học
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.LessionShortDescription)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.PostOn)
+            Thơi gian đăng
         </dt>
 
         <dd>
@@ -51,7 +50,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Modifie)
+            Thời gian sửa
         </dt>
 
         <dd>
@@ -59,16 +58,13 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Images)
+            Hình ảnh
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.Images)
+            <img src=" @Html.DisplayFor(model => model.Images)" />
         </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Trở về danh sách", "Index",new { @class = "btn btn-info" })
 </p>

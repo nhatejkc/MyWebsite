@@ -22,67 +22,75 @@
             <!-- Sidebar -->
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                    <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fas fa-laugh-wink"></i>
-                    </div>
-                    <div class="sidebar-brand-text mx-3">Management <sup>2</sup></div>
-                </a>
+                <li>
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Home">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                            <i class="fas fa-laugh-wink"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3">Trang chủ</div>
+                    </a>
+                </li>
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
                     <a class="nav-link" href="/Admin/Actors">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Actors</span>
+                        <span>Quản lý nhân vật</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Admin/Comments">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Quản lý bình luận</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/Admin/Grammars">
                         <i class="fa fa-cube"></i>
-                        <span>Grammars</span>
+                        <span>Quản lý ngữ pháp</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/Admin/Lessions">
                         <i class="fa fa-book"></i>
-                        <span>Lessions</span>
+                        <span>Quản lý bài học</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/Admin/QuestionItems">
                         <i class="fa fa-anchor"></i>
-                        <span>QuestionItem</span>
+                        <span>Quản lý phương án</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/Admin/Questions">
                         <i class="fa fa-question-circle"></i>
-                        <span>Questions</span>
+                        <span>Quản lý câu hỏi</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/Admin/SoundConservations">
                         <i class="fa fa-music"></i>
-                        <span>SoundConservations</span>
+                        <span>Quản lý hội thoại</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/Admin/Topics">
                         <i class="fa fa-list-alt"></i>
-                        <span>Topics</span>
+                        <span>Quản lý đề thi</span>
                     </a>
                 </li>
                 @if (Request.IsAuthenticated && User.IsInRole("Manager"))
                 {
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            User Admin
+                            Quản lý tài khoản
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item " href="@Url.Action("Create", "UsersAdmin", new { Area = "" })">Create User</a>
+                            <a class="dropdown-item " href="@Url.Action("Create", "UsersAdmin", new { Area = "" })">Tạo tài khoản</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item " href="@Url.Action("Index", "UsersAdmin", new { Area = "" })">User Management</a>
+                            <a class="dropdown-item " href="@Url.Action("Index", "UsersAdmin", new { Area = "" })">Danh sách tài khoản</a>
                         </div>
                     </li>
                 }
@@ -90,12 +98,12 @@
                 {
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Role Admin
+                            Quản lý quyền truy cập
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item " href="@Url.Action("Create", "RolesAdmin", new { Area = "" })">Create Role</a>
+                            <a class="dropdown-item " href="@Url.Action("Create", "RolesAdmin", new { Area = "" })">Tạo quyền truy cập</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item " href="@Url.Action("Index", "RolesAdmin", new { Area = "" })">Role Management</a>
+                            <a class="dropdown-item " href="@Url.Action("Index", "RolesAdmin", new { Area = "" })">Danh sách quyền truy cập</a>
                         </div>
                     </li>
                 }
@@ -112,7 +120,6 @@
                             <li class="nav-link">
                                 @Html.ActionLink("Xin chào " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "nav-link" })
                             </li>
-                            <li class="nav-link"><a href="javascript:document.getElementById('logoutForm').submit()" class="nav-link">Đăng xuất</a></li>
                         </ul>
                     </nav>
                     <!-- End of Topbar -->

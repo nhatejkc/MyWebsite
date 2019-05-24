@@ -634,21 +634,21 @@ namespace MyWebsite.Core
             context.SaveChanges();
             #endregion
 
-            #region Add Comment
-            var comments = new List<Comment>()
-            {
-                new Comment()
-                {
-                    UserComment="Nguyen Van A",
-                    CommentContent="Bài học rất thú vị",
-                    LessionId=1,
-                    CommentTime= DateTime.Now
-                }
-            };
+            //#region Add Comment
+            //var comments = new List<Comment>()
+            //{
+            //    new Comment()
+            //    {
+            //        UserComment="Nguyen Van A",
+            //        CommentContent="Bài học rất thú vị",
+            //        LessionId=1,
+            //        CommentTime= DateTime.Now
+            //    }
+            //};
 
-            context.Comments.AddRange(comments);
-            context.SaveChanges();
-            #endregion
+            //context.Comments.AddRange(comments);
+            //context.SaveChanges();
+            //#endregion
 
             #region Add Grammar
             var grammars = new List<Grammar>()
@@ -2895,26 +2895,6 @@ namespace MyWebsite.Core
                 new Topic()
                 {
                     TopicTitle="Đề số 5",
-                },
-                new Topic()
-                {
-                    TopicTitle="Đề số 6",
-                },
-                new Topic()
-                {
-                    TopicTitle="Đề số 7",
-                },
-                new Topic()
-                {
-                    TopicTitle="Đề số 8",
-                },
-                new Topic()
-                {
-                    TopicTitle="Đề số 9",
-                },
-                new Topic()
-                {
-                    TopicTitle="Đề số 10",
                 }
             };
 
@@ -3134,6 +3114,147 @@ namespace MyWebsite.Core
                     QuestionTitle="スーパーの (中) に花屋はなやがあります。",
                     Answer="なか",
                    TopicId=3
+                },
+                // Topic 4
+                //QUESSION 1 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="先週の金曜日（学校）のしょかんでレポートを書きました.",
+                    Answer="がっこう",
+                    TopicId=4,
+                },
+                //QUESSION 2 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="(今晩）いっしょにビールを飲みませんか。",
+                    Answer="こんばん",
+                   TopicId=4
+                },
+                //QUESSION 3 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="(新聞) を読みます。それから、ＣＤを聞きます。",
+                    Answer="しんぶん",
+                   TopicId=4
+                },
+                //QUESSION 4 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="学校は (午後) 一時五十分からです。",
+                    Answer="ごご",
+                   TopicId=4
+                },
+                //QUESSION 5 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="あの (店) で辞書を買いました。",
+                    Answer="みせ",
+                   TopicId=4
+                },
+                //QUESSION 6 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="来月 (一人) で京都へ行きますか。",
+                    Answer="ひとりで",
+                   TopicId=4
+                },
+                //QUESSION 7 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="よる時々ビデオを（見ます）。",
+                    Answer="みます",
+                   TopicId=4
+                },
+                //QUESSION 8 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="ちょっと休みませんか。（水）を飲みましょう。",
+                    Answer="みず",
+                   TopicId=4
+                },
+                //QUESSION 9 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="(誕生日）は何月何日ですか。",
+                    Answer="たんじょうび",
+                   TopicId=4
+                },
+                //QUESSION 10 TOPIC 4
+                new Question()
+                {
+                    QuestionTitle="ロサンゼルスは今（午前）十一時です。",
+                    Answer="ごぜん",
+                   TopicId=4
+                },
+                // Topic 5
+                 new Question()
+                {
+                    QuestionTitle="いつ（お母さん）に電話をかけますか。",
+                    Answer="おかあさん",
+                    TopicId=2,
+                },
+                //QUESSION 2 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="(お父さん）の誕生日になんをあげましたか。",
+                    Answer="おかあさん",
+                   TopicId=5
+                },
+                //QUESSION 3 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="もう（昼ご飯）を食べましたか。",
+                    Answer="ひるごはん",
+                   TopicId=5
+                },
+                //QUESSION 4 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="ホセさんの（傘）はどれですか。",
+                    Answer="かさ",
+                   TopicId=5
+                },
+                //QUESSION 5 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="富士山は高い山です。そしてきれいな山です。",
+                    Answer="たかい",
+                   TopicId=5
+                },
+                //QUESSION 6 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="あの（赤い）かばんはだれのですか。",
+                    Answer="あかい",
+                    TopicId=5
+                },
+                //QUESSION 7 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="この町まちは (夜) とてもにぎやかですか。",
+                    Answer="よる",
+                   TopicId=5
+                },
+                //QUESSION 8 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="あのレストランは (安い) ですが、おいしくないです。",
+                    Answer="やすい",
+                   TopicId=5
+                },
+                //QUESSION 9 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="毎朝まいあさ冷つめたいジュースを (飲みます) 。",
+                    Answer="のみます",
+                   TopicId=5
+                },
+                //QUESSION 10 TOPIC 5
+                new Question()
+                {
+                    QuestionTitle="デパートでワインを買かいます。それからレストランで (晩ご飯) を食たべます。",
+                    Answer="ばんごはん",
+                   TopicId=5
                 },
             };
             context.Questions.AddRange(questions);
@@ -3772,6 +3893,428 @@ namespace MyWebsite.Core
                 {
                     Title="なま",
                     QuestionId=30,
+                },
+                // Topic 4 
+                //QUESION 1 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="がっこう",
+                    QuestionId=31,
+                },
+                new QuestionItem()
+                {
+                    Title="がくこう",
+                    QuestionId=31,
+                },
+                new QuestionItem()
+                {
+                    Title="かっこう",
+                    QuestionId=31,
+                },
+                new QuestionItem()
+                {
+                    Title="かくこう",
+                    QuestionId=31,
+                },
+                //QUESION 2 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="けさ",
+                    QuestionId=32,
+                },
+                new QuestionItem()
+                {
+                    Title="いまばん",
+                    QuestionId=32,
+                },
+                new QuestionItem()
+                {
+                    Title="ゆうべ",
+                    QuestionId=32,
+                },
+                new QuestionItem()
+                {
+                    Title="こんばん",
+                    QuestionId=32,
+                },
+                //QUESION 3 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="しんぶん",
+                    QuestionId=33,
+                },
+                new QuestionItem()
+                {
+                    Title="じんぶん",
+                    QuestionId=33,
+                },
+                new QuestionItem()
+                {
+                    Title="しんふん",
+                    QuestionId=33,
+                },
+                new QuestionItem()
+                {
+                    Title="じんふん",
+                    QuestionId=33,
+                },
+                //QUESION 4 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="ごぜん",
+                    QuestionId=34,
+                },
+                new QuestionItem()
+                {
+                    Title="ごご",
+                    QuestionId=34,
+                },
+                new QuestionItem()
+                {
+                    Title="こあと",
+                    QuestionId=34,
+                },
+                new QuestionItem()
+                {
+                    Title="こご",
+                    QuestionId=34,
+                },
+                //QUESION ５ TOPIC 4
+                new QuestionItem()
+                {
+                    Title="こえ",
+                    QuestionId=35,
+                },
+                new QuestionItem()
+                {
+                    Title="はな",
+                    QuestionId=35,
+                },
+                new QuestionItem()
+                {
+                    Title="かみ",
+                    QuestionId=35,
+                },
+                new QuestionItem()
+                {
+                    Title="みせ",
+                    QuestionId=35,
+                },
+                //QUESION 6 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="ひとりで",
+                    QuestionId=36,
+                },
+                new QuestionItem()
+                {
+                    Title="いちひとで",
+                    QuestionId=36,
+                },
+                new QuestionItem()
+                {
+                    Title="いちにんで",
+                    QuestionId=36,
+                },
+                new QuestionItem()
+                {
+                    Title="いちじんで",
+                    QuestionId=36,
+                },
+                //QUESION 7 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="のみます",
+                    QuestionId=37,
+                },
+                new QuestionItem()
+                {
+                    Title="たべます",
+                    QuestionId=37,
+                },
+                new QuestionItem()
+                {
+                    Title="すいます",
+                    QuestionId=37,
+                },
+                new QuestionItem()
+                {
+                    Title="みます",
+                    QuestionId=37,
+                },
+                //QUESION 8 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="か",
+                    QuestionId=38,
+                },
+                new QuestionItem()
+                {
+                    Title="みず",
+                    QuestionId=38,
+                },
+                new QuestionItem()
+                {
+                    Title="こおり",
+                    QuestionId=38,
+                },
+                new QuestionItem()
+                {
+                    Title="うみ",
+                    QuestionId=38,
+                },
+                //QUESION 9 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="たんじょうび",
+                    QuestionId=39,
+                },
+                new QuestionItem()
+                {
+                    Title="たんしょうにち",
+                    QuestionId=39,
+                },
+                new QuestionItem()
+                {
+                    Title="たんじょうひ",
+                    QuestionId=39,
+                },
+                new QuestionItem()
+                {
+                    Title="たんじょうにち",
+                    QuestionId=39,
+                },
+                //QUESION 10 TOPIC 4
+                new QuestionItem()
+                {
+                    Title="ごご",
+                    QuestionId=40,
+                },
+                new QuestionItem()
+                {
+                    Title="ごまえ",
+                    QuestionId=40,
+                },
+                new QuestionItem()
+                {
+                    Title="ごぜん",
+                    QuestionId=40,
+                },
+                new QuestionItem()
+                {
+                    Title="しょうまえ",
+                    QuestionId=40,
+                },
+                ///Topic 5
+                /// //QUESION 1 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="おかさん",
+                    QuestionId=41,
+                },
+                new QuestionItem()
+                {
+                    Title="おばさん",
+                    QuestionId=41,
+                },
+                new QuestionItem()
+                {
+                    Title="おかあさん",
+                    QuestionId=41,
+                },
+                new QuestionItem()
+                {
+                    Title="おばあさん",
+                    QuestionId=41,
+                },
+                //QUESION 2 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="おちちさん",
+                    QuestionId=42,
+                },
+                new QuestionItem()
+                {
+                    Title="おとうさん",
+                    QuestionId=42,
+                },
+                new QuestionItem()
+                {
+                    Title="おじいさん",
+                    QuestionId=42,
+                },
+                new QuestionItem()
+                {
+                    Title="おとさん",
+                    QuestionId=42,
+                },
+                //QUESION 3 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="ひまごはん",
+                    QuestionId=43,
+                },
+                new QuestionItem()
+                {
+                    Title="ひろごはん",
+                    QuestionId=43,
+                },
+                new QuestionItem()
+                {
+                    Title="ひくごはん",
+                    QuestionId=43,
+                },
+                new QuestionItem()
+                {
+                    Title="ひくごはん",
+                    QuestionId=43,
+                },
+                //QUESION 4 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="かさ",
+                    QuestionId=44,
+                },
+                new QuestionItem()
+                {
+                    Title="かみ",
+                    QuestionId=44,
+                },
+                new QuestionItem()
+                {
+                    Title="くつ",
+                    QuestionId=44,
+                },
+                new QuestionItem()
+                {
+                    Title="ふくろ",
+                    QuestionId=44,
+                },
+                //QUESION ５ TOPIC 5
+                new QuestionItem()
+                {
+                    Title="ふるい",
+                    QuestionId=45,
+                },
+                new QuestionItem()
+                {
+                    Title="ちいさい",
+                    QuestionId=45,
+                },
+                new QuestionItem()
+                {
+                    Title="たかい",
+                    QuestionId=45,
+                },
+                new QuestionItem()
+                {
+                    Title="ちかい",
+                    QuestionId=45,
+                },
+                //QUESION 6 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="しろい",
+                    QuestionId=46,
+                },
+                new QuestionItem()
+                {
+                    Title="あかい",
+                    QuestionId=46,
+                },
+                new QuestionItem()
+                {
+                    Title="あおい",
+                    QuestionId=46,
+                },
+                new QuestionItem()
+                {
+                    Title="くろい",
+                    QuestionId=46,
+                },
+                //QUESION 7 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="や",
+                    QuestionId=47,
+                },
+                new QuestionItem()
+                {
+                    Title="よる",
+                    QuestionId=47,
+                },
+                new QuestionItem()
+                {
+                    Title="なか",
+                    QuestionId=47,
+                },
+                new QuestionItem()
+                {
+                    Title="ふゆ",
+                    QuestionId=47,
+                },
+                //QUESION 8 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="ちかい",
+                    QuestionId=48,
+                },
+                new QuestionItem()
+                {
+                    Title="たかい",
+                    QuestionId=48,
+                },
+                new QuestionItem()
+                {
+                    Title="あんい",
+                    QuestionId=48,
+                },
+                new QuestionItem()
+                {
+                    Title="やすい",
+                    QuestionId=48,
+                },
+                //QUESION 9 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="のみます",
+                    QuestionId=49,
+                },
+                new QuestionItem()
+                {
+                    Title="いたみます",
+                    QuestionId=49,
+                },
+                new QuestionItem()
+                {
+                    Title="たのしみます",
+                    QuestionId=49,
+                },
+                new QuestionItem()
+                {
+                    Title="すみます",
+                    QuestionId=49,
+                },
+                //QUESION 10 TOPIC 5
+                new QuestionItem()
+                {
+                    Title="あさごはん",
+                    QuestionId=50,
+                },
+                new QuestionItem()
+                {
+                    Title="ひるごはん",
+                    QuestionId=50,
+                },
+                new QuestionItem()
+                {
+                    Title="ばんごはん",
+                    QuestionId=50,
+                },
+                new QuestionItem()
+                {
+                    Title="こんごはん",
+                    QuestionId=50,
                 },
             };
             context.QuestionItems.AddRange(questionItems);

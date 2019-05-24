@@ -83,6 +83,7 @@
     <Compile Include="Models\Lession.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\QuestionItem.cs" />
+    <Compile Include="Models\QuizAnswersVM.cs" />
     <Compile Include="Models\SoundConservation.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="MyWebsiteDbContext.cs" />

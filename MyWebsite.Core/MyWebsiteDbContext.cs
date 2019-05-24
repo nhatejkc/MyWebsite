@@ -20,6 +20,7 @@ namespace MyWebsite.Core
         public DbSet<Grammar> Grammars { get; set; }
         public DbSet<Lession> Lessions { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<QuestionItem> QuestionItems { get; set; }
         public DbSet<SoundConservation> SoundConservations { get; set; }

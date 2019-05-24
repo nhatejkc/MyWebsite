@@ -14,9 +14,12 @@ namespace MyWebsite.Core.Models
         public string CommentContent { get; set; }
         public DateTime CommentTime { get; set; }
         
-        public int LessionId { get; set; }
+        public int? LessionId { get; set; }
         [ForeignKey("LessionId")]
         public virtual Lession Lession { get; set; }
-       
+        public int? TopicId { get; set; }
+        [ForeignKey("TopicId")]
+        public virtual Topic Topic { get; set; }
+
     }
 }

@@ -14,7 +14,7 @@ namespace MyWebsite.Core.Models
         public int ActorId { get; set; }
         [ForeignKey("ActorId")]
         public virtual Actor Actor { get; set; }
-        public int LessionId { get; set; }
+        public int? LessionId { get; set; }
         [ForeignKey("LessionId")]
         public virtual Lession Lession { get; set; }
         [Required(ErrorMessage = "VietNamese is required.")]

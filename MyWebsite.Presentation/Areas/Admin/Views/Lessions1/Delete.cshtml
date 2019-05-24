@@ -1,0 +1,81 @@
+﻿@model MyWebsite.Core.Models.Lession
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Lession</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MainConent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainConent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoundLession)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoundLession)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sound)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sound)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LessionShortDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LessionShortDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modifie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modifie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Images)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Images)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

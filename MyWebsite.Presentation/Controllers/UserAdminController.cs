@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace MyWebsite.Presentation.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Manager")]
     public class UsersAdminController : Controller
     {
         public UsersAdminController()

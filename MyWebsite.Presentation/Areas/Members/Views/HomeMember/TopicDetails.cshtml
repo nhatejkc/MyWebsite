@@ -1,4 +1,5 @@
 ﻿@model MyWebsite.Core.Models.Topic
+@using Microsoft.AspNet.Identity
 <!--================Home Banner Area =================-->
 <section class="banner_area">
     <div class="banner_inner d-flex align-items-center">
@@ -19,29 +20,126 @@
 <section class="course_details_area section_gap">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
-                <h1>@Model.TopicTitle</h1>
+            <div class="col-lg-8 course_details_left">
+                <h1 class="title">@Model.TopicTitle</h1>
                 <div class="content_wrapper">
                     <div class="content">
                         @Html.Action("GetQuestionByTopic", "HomeMember")
                     </div>
-                    @*<h3 class="title">Nhận xét</h3>
-                    <div id="show">
-                        @Html.Action("Comment", "Home", new { id = Model.Id })
+                </div>
+            </div>
+            <div class="col-lg-4 right-contents">
+                <h3 class="title">Nhận xét</h3>
+                <div id="show">
+                    @Html.Action("Comment", "HomeMember", new { id = Model.Id })
+                </div>
+                <div class="content">
+                    <div class="feedeback">
+                        <h5>Thêm bình luận</h5>
+                        <input type="hidden" value=@Model.Id id="topicid" />
+                        <label>Nội dung</label>
+                        <input name="CommentContent" class="form-control" id="CommentContent" />
                     </div>
-                    <div class="content">
-                        <div class="feedeback">
-                            <h5>Thêm bình luận</h5>
-                            <input type="hidden" value=@Model.Id id="lessonid" />
-                            <label>Tên của bạn</label>
-                            <input name="UserComment" class="form-control" id="UserComment" />
-                            <label>Nội dung</label>
-                            <input name="CommentContent" class="form-control" id="CommentContent" />
-                        </div>
-                    </div>*@
+                </div>
+                <h3 class="title">Danh sách các đề thi</h3>
+                <div class="content">
+                    @Html.Action("GetAll", "HomeMember")
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--================ End Course Details Area =================-->
+@section MyScripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#Reset').on('click', function () {
+                window.location.reload();
+            });
+            $('#SubmitQuiz').on('click', function () {
+                var sel = $('#countQuections').text();
+
+                console.log(sel);
+
+                var resultQuiz = [], countQuestion = parseInt(sel), question = {}, j = 1;
+
+                for (var i = 1; i < countQuestion; i++) {
+                    question = {
+                        QuestionID: $('#ID_Q' + i).text(),
+                        QuestionText: $('#Q' + i).text(),
+                        AnswerQ: $('input[name=inlineRadioOptions' + i + ']:checked').val()
+                    }
+
+                    resultQuiz.push(question);
+                }
+
+                $.ajax({
+
+                    type: 'POST',
+                    url: '@Url.Action("QuizTest", "HomeMember")',
+                    data: { resultQuiz },
+
+                    success: function (response) {
+
+                        if (response.result.length > 0) {
+                            for (var i = 0; i < response.result.length; i++) {
+                                if (response.result[i].isCorrect == true) {
+
+                                    $('#AnsQ' + j).html('<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Câu trả lời chính xác </div>');
+                                }
+                                else {
+                                    $('#AnsQ' + j).html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Đáp án sai - Đáp án đúng là : <b>' + response.result[i].AnswerQ + '</b></div>');
+                                }
+                                j++;
+                            }
+                        }
+                        else {
+                            alert("Đã có lỗi xảy ra");
+                        }
+
+
+                       console.log(response.result.length);
+
+                    },
+                    error: function (response) {
+
+                    }
+                });
+
+                console.log(resultQuiz);
+            });
+        });
+
+    </script>
+}
+@section CommentScripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#CommentContent').keypress(function (event) {
+
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    var content = $("#CommentContent").val();
+                    var user ="abc";
+                    var topic = $("#topicid").val();
+                    $.ajax({
+                        url: "/HomeMember/Comment/",
+                        data: { user: user, content: content, id: topic },
+                        dataType: "html",
+                        type: "GET",
+                        success: function (data) {
+                            $("#CommentContent").val("");
+                            $("#show").html(data);
+                        }
+
+                    })
+
+                }
+
+            });
+        })
+    </script>
+}

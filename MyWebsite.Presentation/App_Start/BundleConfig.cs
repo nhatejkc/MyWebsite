@@ -29,7 +29,8 @@ namespace MyWebsite.Presentation
             //Theme
             bundles.Add(new StyleBundle("~/Content/style").Include(
                  "~/Content/Theme/css/themify-icons.css",
-                  "~/Content/Theme/css/font-awesome.css",
+                  "~/Content/Theme/css/fontawesome.min.css",
+                  "~/Content/Theme/css/fontawesome.css",
                      "~/Content/Theme/css/bootstrap.css",
                      "~/Content/Theme/css/flaticon.css",
                      "~/Content/Theme/css/style.css",

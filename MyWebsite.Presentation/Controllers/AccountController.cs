@@ -1,7 +1,4 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -55,6 +52,7 @@ namespace MyWebsite.Presentation.Controllers
 
         //
         // GET: /Account/Login
+        [HttpGet]
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
@@ -113,6 +111,11 @@ namespace MyWebsite.Presentation.Controllers
             {
                 return View("Error");
             }
+            var user = await UserManager.FindByIdAsync(await SignInManager.GetVerifiedUserIdAsync());
+            if (user != null)
+            {
+                ViewBag.Status = "For DEMO purposes the current " + provider + " code is: " + await UserManager.GenerateTwoFactorTokenAsync(user.Id, provider);
+            }
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
@@ -148,6 +151,7 @@ namespace MyWebsite.Presentation.Controllers
 
         //
         // GET: /Account/Register
+        [HttpGet]
         [AllowAnonymous]
         public ActionResult Register()
         {
@@ -168,12 +172,12 @@ namespace MyWebsite.Presentation.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -186,6 +190,7 @@ namespace MyWebsite.Presentation.Controllers
 
         //
         // GET: /Account/ConfirmEmail
+        [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
@@ -223,10 +228,10 @@ namespace MyWebsite.Presentation.Controllers
 
                 // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
             // If we got this far, something failed, redisplay form
@@ -235,6 +240,7 @@ namespace MyWebsite.Presentation.Controllers
 
         //
         // GET: /Account/ForgotPasswordConfirmation
+        [HttpGet]
         [AllowAnonymous]
         public ActionResult ForgotPasswordConfirmation()
         {
@@ -243,6 +249,7 @@ namespace MyWebsite.Presentation.Controllers
 
         //
         // GET: /Account/ResetPassword
+        [HttpGet]
         [AllowAnonymous]
         public ActionResult ResetPassword(string code)
         {
@@ -277,6 +284,7 @@ namespace MyWebsite.Presentation.Controllers
 
         //
         // GET: /Account/ResetPasswordConfirmation
+        [HttpGet]
         [AllowAnonymous]
         public ActionResult ResetPasswordConfirmation()
         {
@@ -439,7 +447,7 @@ namespace MyWebsite.Presentation.Controllers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
-        private IAuthenticationManager AuthenticationManager
+        public IAuthenticationManager AuthenticationManager
         {
             get
             {

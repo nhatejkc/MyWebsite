@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" href="./Content/Theme/img/favicon.png" type="image/png" />
-    <title>Learning Japanese</title>
+    <link rel="icon" href="~/Content/Images/logo.png" type="image/png" />
+    <title>Học tiếng Nhật</title>
     <!-- Bootstrap CSS -->
     <style type="text/css">
 
@@ -24,11 +24,47 @@
             font-weight: bold;
         }
     </style>
+    @Styles.Render("~/Content/Admin/css")
     @Styles.Render("~/Content/style")
     @*<script type="text/javascript" src="https://anonyviet.com/php/hoaroi/hoaroi.js"></script>*@
 </head>
 <body>
-    @Html.Partial("_HeaderPartial")
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <img src="~/Content/Images/logo.png" class="navbar-brand" width="50" />
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/About">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/Home/Contact">Liên hệ</a>
+                </li>
+                @if (Request.IsAuthenticated && User.IsInRole("Members"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "HomeMember", new { Area = "Members" })">Khóa học của tôi</a>
+                    </li>
+                }
+                @if (Request.IsAuthenticated && User.IsInRole("Manager") || User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Actors", "Admin")">Đi đến quản lí</a>
+                    </li>
+                }
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                @Html.Partial("_LoginPartial")
+
+            </form>
+        </div>
+    </nav>
+    
     @RenderBody()
     @Html.Partial("_FooterPartial")
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

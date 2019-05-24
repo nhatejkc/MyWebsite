@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details.</h2>
+<h2>Chi tiết.</h2>
 
 <div>
-    <h4>User</h4>
+    <h4>Người dùng</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.UserName)
+            Tên người dùng
         </dt>
         <dd>
             @Html.DisplayFor(model => model.UserName)
@@ -22,7 +22,7 @@
 @if (ViewBag.RoleNames.Count == 0)
 {
     <hr />
-    <p>No roles found for this user.</p>
+    <p>Không có quyền nào</p>
 }
 
 <table class="table">
@@ -37,8 +37,8 @@
     }
 </table>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Trở về dnah sách", "Index")
 </p>
 
 
